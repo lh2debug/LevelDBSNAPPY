@@ -1,0 +1,75 @@
+#include <vector>
+#include <iostream>
+#include <string>
+#include "version_set.h"
+#include "port/port_posix.h"
+
+namespace leveldb{
+
+
+using std::ostream;
+using std::endl;
+using std::vector;
+using std::string;
+
+class StorgeStat{
+  public:
+    static void PrintDiskSpace(const string& message, ostream& os);
+
+    static void PrintLevelSstNum(ostream& os);
+
+    static void PrintLevelSstKeyRange(ostream& os);
+
+    static void PrintCompactDeleteKeyPercent(ostream& os);
+
+    static void PrintTrivialMoveNum(ostream& os);
+
+    static VersionSet* vset_;
+    static port::Mutex* mu_;
+    // print distribution of file nums in low_level and high_level when compacting
+    static void PrintCompactResult(std::ostream&);
+
+    // update lh_compact_times, level_compact_times and so on.
+    static void UpdateWhileCompact(int ll_num, int hl_num, int level);
+
+    // update while addfile in the compaction
+    static void UpdateWhileWriteFile(int level);
+
+    static void UpdateWhileIterKeyInCompact(Iterator* iter, bool drop);
+
+    static void UpdateWhileTrivialMove(int level);
+
+    static void Clear();
+   private:
+
+    static int trivialmove_level;    
+
+    static int trivialmove_num[100];
+
+    static int deleted_key_num;
+
+    static int all_key_num;
+
+    // ll_num + hl_num compact times
+    static int lh_compact_times[100][100];
+    // max ll_num
+    static int ll_max;
+    // max hl_num
+    static int hl_max;
+    // max level
+    static int level_max;
+    // level compact time
+    static int level_compact_times[100];
+
+    // number of level file reads and writes when compaction 
+    static int level_read_file_nums[100];
+    static int level_write_file_nums[100];
+    static int64_t diskspace_; // byte unit
+    static int64_t ComputeDiskSpaceToken(Version* version);
+
+};
+
+
+
+}
+

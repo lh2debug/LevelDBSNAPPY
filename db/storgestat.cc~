@@ -1,0 +1,160 @@
+#include "storgestat.h"
+#include "db/dbformat.h"
+#include <cstring>
+#include <iostream>
+
+namespace leveldb{
+
+long long int StorgeStat::deleted_key_num = 0;
+int StorgeStat::all_key_num = 0;
+int StorgeStat::trivialmove_num[100] = {0};
+int StorgeStat::trivialmove_level = -1;
+
+int64_t StorgeStat::diskspace_ = 0;
+VersionSet* StorgeStat::vset_ = NULL;
+port::Mutex* StorgeStat::mu_ = NULL;
+
+int64_t StorgeStat::ComputeDiskSpaceToken(Version* version){
+  diskspace_ = 0;
+  for (int level = 0;level < config::kNumLevels;++level){
+    for (int index = 0;index < version->files_[level].size();++index){
+      diskspace_ += (version->files_[level][index])->file_size;
+    }
+  }
+  return diskspace_;
+}
+
+void StorgeStat::PrintTrivialMoveNum(ostream& os){
+  for (int i=0;i<=trivialmove_level;++i){
+    os << "level " << i << " trivialmove num is " << trivialmove_num[i] << endl;
+  }
+}
+
+void StorgeStat::UpdateWhileTrivialMove(int level){
+  if (level > trivialmove_level) trivialmove_level = level;
+  trivialmove_num[level]++;
+}
+
+void StorgeStat::PrintDiskSpace(const string& message, ostream& os){
+  Version* version = vset_->current();
+  os << message << " the disk space token is " 
+     << ComputeDiskSpaceToken(version) / 1048576.0
+     << " MB"
+     << endl;
+}
+
+void StorgeStat::PrintLevelSstNum(ostream& os){
+  Version* version = vset_->current();
+  for (int level=0;level < config::kNumLevels;++level)
+    if (version->files_[level].size() != 0)
+      os << "level " << level << " has " << version->files_[level].size() << " sstable." << endl;
+}
+
+void StorgeStat::PrintLevelSstKeyRange(ostream& os){
+  Version* version = vset_->current();
+  for (int level=0;level < config::kNumLevels;++level)
+    if (version->files_[level].size() != 0){
+      os << "----------level " << level << " ----------" << endl;
+      for (int index = 0;index < version->files_[level].size();++index){
+        FileMetaData* f = version->files_[level][index];
+        os << "[" << (f->smallest).Encode().ToString() << "--" << (f->largest).Encode().ToString() << "] "; 
+      }
+      os << "-----------------------------" << endl;
+    }
+}
+
+
+void StorgeStat::UpdateWhileIterKeyInCompact(Iterator* iter, bool drop){
+  int key_size = iter->key().ToString().size();
+  if (key_size < 0) std::cout << "key size " << key_size << std::endl;
+  int value_size = 0;
+  if (!drop)
+    value_size = iter->value().ToString().size();
+  else
+    deleted_key_num += key_size + value_size;
+  if (value_size < 0) std::cout << "value size " << value_size << std::endl;
+  all_key_num += key_size + value_size;
+
+}
+
+void StorgeStat::PrintCompactDeleteKeyPercent(ostream& os){
+  os << deleted_key_num << " " << all_key_num << endl;
+  double percent = deleted_key_num / 1.0 / all_key_num * 100;
+  os << "The percent of deleted key size in compaction is " << percent << "%" << endl; 
+}
+
+int StorgeStat::lh_compact_times[100][100] = {0};
+int StorgeStat::hl_max = -1;
+int StorgeStat::ll_max = -1;
+int StorgeStat::level_max = -1;
+int StorgeStat::level_compact_times[100] = {0};
+int StorgeStat::level_read_file_nums[100] = {0};
+int StorgeStat::level_write_file_nums[100] = {0};
+
+void StorgeStat::Clear(){
+  memset(lh_compact_times, 0, sizeof(int) * 100 * 100);
+  memset(level_compact_times, 0, sizeof(int) * 100);
+  memset(level_write_file_nums, 0, sizeof(int) * 100);
+  memset(level_read_file_nums, 0, sizeof(int) * 100);
+  memset(trivialmove_num, 0, sizeof(int) * 100);
+  trivialmove_level = -1;
+  hl_max = -1;
+  ll_max = -1;
+  level_max = -1;
+  deleted_key_num = 0;
+  all_key_num = 0;
+}
+
+void StorgeStat::UpdateWhileCompact(int ll_num, int hl_num, int level){
+  if (hl_num > hl_max) hl_max = hl_num;
+  if (ll_num > ll_max) ll_max = ll_num;
+  if (level > level_max)  level_max = level;
+  lh_compact_times[ll_num][hl_num]++;
+  level_compact_times[level]++;
+  level_read_file_nums[level] += ll_num;
+  level_read_file_nums[level + 1] += hl_num;
+}
+
+void StorgeStat::PrintCompactResult(std::ostream &os){
+/*  
+  int sum_time = 0;
+  for (int i = 0;i < y_max;++i)
+  for (int j = 0;j < x_max;++j){
+    sum_time += compact_times[i][j];
+  }
+*/
+  // compute sum_time above 
+
+  //int level_sum_time = 0;
+  //for (int i = 0;i < level_max;++i)
+  //  level_sum_time += level_compact_times[i];
+  // compute level_sum_time above
+  
+  // print hl_num+ll_num times
+  for (int i = 0; i <= ll_max; i++){
+      for (int j = 0; j < hl_max; j++){
+      if (lh_compact_times[i][j] == 0) continue;
+        //double persent = compact_times[i][j] / 1.0 / sum_time * 100;
+      //os.setf(std::ios::fixed);
+      os << i << "+" << j << " compaction times: " << lh_compact_times[i][j] << std::endl;
+      //os << " persent: " << std::setprecision(2) << persent << "%" << std::endl;
+    }
+  }
+  
+  for (int i = 0;i < level_max + 1;++i){
+    //double persent = level_compact_times[i] / 1.0 / level_sum_time * 100;
+    //os.setf(std::ios::fixed);
+    os << "level " << i << " compact times: " << level_compact_times[i] << std::endl;
+    //os << "level " << i << "compact %: " << std::setprecision(2) << persent << "%" << std::endl;
+    os << "level " << i << " read file nums: " << level_read_file_nums[i] << std::endl; 
+    os << "level " << i << " write file nums: "<< level_write_file_nums[i] << std::endl;
+  }
+}
+
+void StorgeStat::UpdateWhileWriteFile(int level){
+  level_write_file_nums[level]++;
+  if (level > level_max) level_max = level;
+}
+
+
+}
