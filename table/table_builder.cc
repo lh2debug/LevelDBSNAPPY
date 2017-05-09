@@ -44,7 +44,7 @@ struct TableBuilder::Rep {
 
   std::string compressed_output;
   // lhh add
-  uint64_t del_key_size;
+  uint64_t del_key_bytes;
 
   Rep(const Options& opt, WritableFile* f)
       : options(opt),
@@ -54,7 +54,7 @@ struct TableBuilder::Rep {
         data_block(&options),
         index_block(&index_block_options),
         num_entries(0),
-        del_key_size(0),
+        del_key_bytes(0),
         closed(false),
         filter_block(opt.filter_policy == NULL ? NULL
                      : new FilterBlockBuilder(opt.filter_policy)),
@@ -275,12 +275,12 @@ uint64_t TableBuilder::FileSize() const {
 //lhh add
 void TableBuilder::StatDelKeySize(bool is_del_key, uint64_t key_size){
   if (is_del_key)
-    rep_->del_key_size += key_size;
+    rep_->del_key_bytes += key_size;
 }
 
 //lhh add
 uint64_t TableBuilder::DelKeySize(){
-  return rep_->del_key_size;
+  return rep_->del_key_bytes;
 }
 
 }  // namespace leveldb

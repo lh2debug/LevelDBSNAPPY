@@ -147,7 +147,7 @@ static const char* FLAGS_db = NULL;
 
 
 //lhh add
-static bool key_range_same = true;
+static bool key_range_same = false;
 
 static bool only_write = false;
 
@@ -207,7 +207,7 @@ struct StatUtil {
     const char* strcompact = "compact,";
     const char*  strstats = "stats,";
     const char*  strcycleoverwrite = "cycleoverwrite,";
-    const char* striostat = "iostat";
+    const char* striostat = "iostat,";
     int byte_need = cnt_ * (strlen(strdspace) * 2 + strlen(strcyclewritefull) + strlen(strdelete) + strlen(strstats) * 2 + 6) + strlen(strdspace) + strlen(strlevelsstnum) + strlen(strmovenum) + strlen(striostat) + strlen(strdeleteperc) + strlen(strcompactresult) + strlen(strcompact) + 7;
     bmark_ = new char[byte_need];
     char* tmp_bmark = bmark_;
@@ -243,8 +243,8 @@ struct StatUtil {
 
 };
 
-int StatUtil::cycle_ = 7;
-int StatUtil::cnt_ = 30;
+int StatUtil::cycle_ = 0;
+int StatUtil::cnt_ = 1;
 int StatUtil::file_index_ = 0;
 char* StatUtil::bmark_ = NULL;
 

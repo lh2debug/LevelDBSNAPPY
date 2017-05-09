@@ -43,7 +43,14 @@ static const int kReadBytesPeriod = 1048576;
 
 //lhh add
 //0.21 mean the number of del key is twice the number of normal key whereas the size of key is 16 bits and the size of value is 100bits.
-static const double kDelKeyFileTrigger = 0.21;
+static const double kDelDataDealTriggerPercent = 0.21;
+
+
+//lhh add
+static const double kDelKeyScoreWeightCoef = 10.0;
+
+//lhh add
+static const double kScoreAmplifyCoef = 2.0;
 
 }  // namespace config
 

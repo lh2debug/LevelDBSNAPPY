@@ -22,9 +22,9 @@ struct FileMetaData {
   InternalKey smallest;       // Smallest internal key served by table
   InternalKey largest;        // Largest internal key served by table
   //lhh add
-  bool is_del_key_file;
+  uint64_t del_keys_bytes;
 
-  FileMetaData() : refs(0), is_del_key_file(false), allowed_seeks(1 << 30), file_size(0) { }
+  FileMetaData() : refs(0), del_keys_bytes(0), allowed_seeks(1 << 30), file_size(0) { }
 };
 
 class VersionEdit {
@@ -63,7 +63,7 @@ class VersionEdit {
   // REQUIRES: "smallest" and "largest" are smallest and largest keys in file
   void AddFile(int level, uint64_t file,
                uint64_t file_size,
-               bool is_del_key_size,
+               uint64_t del_keys_bytes,
                const InternalKey& smallest,
                const InternalKey& largest) {
     FileMetaData f;
@@ -72,7 +72,7 @@ class VersionEdit {
     f.smallest = smallest;
     f.largest = largest;
     //lhh add
-    f.is_del_key_file = is_del_key_size;
+    f.del_keys_bytes = del_keys_bytes;
     new_files_.push_back(std::make_pair(level, f));
   }
 

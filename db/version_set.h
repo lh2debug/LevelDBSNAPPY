@@ -268,12 +268,19 @@ class VersionSet {
     char buffer[100];
   };
   const char* LevelSummary(LevelSummaryStorage* scratch) const;
+  //lhh add
 
+  void TotalFileSizeAndDelKeysBytes(int level, uint64_t &file_bytes, uint64_t &del_keys_bytes);
+
+  void PickTrivialMoveFiles(Compaction *c);
  private:
   class Builder;
 
   friend class Compaction;
   friend class Version;
+
+  //lhh add
+  Version* GetCurrentVersion() const;
 
   bool ReuseManifest(const std::string& dscname, const std::string& dscbase);
 
@@ -319,6 +326,8 @@ class VersionSet {
   // No copying allowed
   VersionSet(const VersionSet&);
   void operator=(const VersionSet&);
+
+
 };
 
 // A Compaction encapsulates information about a compaction.

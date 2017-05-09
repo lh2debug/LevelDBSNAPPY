@@ -2121,7 +2121,7 @@ void BM_LogAndApply(int iters, int num_base_files) {
     InternalKey start(MakeKey(2*fnum), 1, kTypeValue);
     InternalKey limit(MakeKey(2*fnum+1), 1, kTypeDeletion);
     //lhh add
-    vbase.AddFile(2, fnum++, 1 /* file size */, false, start, limit);
+    vbase.AddFile(2, fnum++, 1 /* file size */, 0, start, limit);
   }
   ASSERT_OK(vset.LogAndApply(&vbase, &mu));
 
@@ -2133,7 +2133,7 @@ void BM_LogAndApply(int iters, int num_base_files) {
     InternalKey start(MakeKey(2*fnum), 1, kTypeValue);
     InternalKey limit(MakeKey(2*fnum+1), 1, kTypeDeletion);
     //lhh add
-    vedit.AddFile(2, fnum++, 1 /* file size */, false, start, limit);
+    vedit.AddFile(2, fnum++, 1 /* file size */, 0, start, limit);
     vset.LogAndApply(&vedit, &mu);
   }
   uint64_t stop_micros = env->NowMicros();

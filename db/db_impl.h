@@ -199,6 +199,8 @@ class DBImpl : public DB {
   const Comparator* user_comparator() const {
     return internal_comparator_.user_comparator();
   }
+
+  bool NeedScheduleExtraTrivialMove(int level);
 };
 
 // Sanitize db options.  The caller should delete result.info_log if

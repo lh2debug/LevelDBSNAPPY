@@ -17,6 +17,7 @@
 #include "table/two_level_iterator.h"
 #include "util/coding.h"
 #include "util/logging.h"
+#include <vector>
 
 namespace leveldb {
 
@@ -62,15 +63,54 @@ static int64_t TotalFileSize(const std::vector<FileMetaData*>& files) {
   }
   return sum;
 }
+
 //lhh add
-static int64_t TotalDelKeyFileSize(const std::vector<FileMetaData*>& files) {
+
+static void AllFileSizeAndDelKeysBytes2(const std::vector<FileMetaData *> &files, uint64_t &file_bytes,
+                                        uint64_t &del_keys_bytes) {
+  int64_t tmp_file_bytes = 0;
+  int64_t tmp_del_keys_bytes = 0;
+  for (size_t i = 0; i < files.size(); i++) {
+    tmp_file_bytes += files[i]->file_size;
+    tmp_del_keys_bytes += files[i]->del_keys_bytes;
+  }
+  file_bytes = tmp_file_bytes;
+  del_keys_bytes = tmp_del_keys_bytes;
+}
+
+//lhh add
+void VersionSet::TotalFileSizeAndDelKeysBytes(int level, uint64_t &file_bytes, uint64_t &del_keys_bytes){
+  Version* v = GetCurrentVersion();
+  const std::vector<FileMetaData*> files = v->files_[level];
+  int64_t tmp_file_bytes = 0;
+  int64_t tmp_del_keys_bytes = 0;
+  for (size_t i = 0; i < files.size(); i++) {
+    tmp_file_bytes += files[i]->file_size;
+    tmp_del_keys_bytes += files[i]->del_keys_bytes;
+  }
+  file_bytes = tmp_file_bytes;
+  del_keys_bytes = tmp_del_keys_bytes;
+}
+
+//lhh add
+//static int64_t TotalDelKeyFileSize(const std::vector<FileMetaData*>& files) {
+//  int64_t sum = 0;
+//  for (size_t i = 0; i < files.size(); i++) {
+//    if (files[i]->is_del_key_file)
+//      sum += files[i]->file_size;
+//  }
+//  return sum;
+//}
+
+//lhh add
+static int64_t TotalDelKeysBytes(const std::vector<FileMetaData*>& files) {
   int64_t sum = 0;
   for (size_t i = 0; i < files.size(); i++) {
-    if (files[i]->is_del_key_file)
-      sum += files[i]->file_size;
+    sum += files[i]->del_keys_bytes;
   }
   return sum;
 }
+
 Version::~Version() {
   assert(refs_ == 0);
 
@@ -1069,11 +1109,22 @@ void VersionSet::MarkFileNumberUsed(uint64_t number) {
   }
 }
 
+//lhh add
+Version* VersionSet::GetCurrentVersion() const {
+  return current_;
+}
+
 void VersionSet::Finalize(Version* v) {
   // Precomputed best level for next compaction
   int best_level = -1;
   double best_score = -1;
-
+  //lhh add
+  uint64_t level_bytes;
+  uint64_t level_del_keys_bytes;
+  std::vector<uint64_t> del_keys_bytes;
+  std::vector<uint64_t> files_bytes;
+  del_keys_bytes.resize(config::kNumLevels, 0);
+  files_bytes.resize(config::kNumLevels, 0);
   for (int level = 0; level < config::kNumLevels-1; level++) {
     double score;
     if (level == 0) {
@@ -1092,11 +1143,19 @@ void VersionSet::Finalize(Version* v) {
           static_cast<double>(config::kL0_CompactionTrigger);
     } else {
       // Compute the ratio of current size to size limit.
-      const uint64_t level_bytes = TotalFileSize(v->files_[level]);
+      //const uint64_t level_bytes = TotalFileSize(v->files_[level]);
       //lhh add
-      const uint64_t level_del_file_bytes = TotalDelKeyFileSize(v->files_[level]);
+      //const uint64_t level_del_file_bytes = TotalDelKeyFileSize(v->files_[level]);
+
+      //lhh add
+      //const uint64_t level_del_keys_bytes = TotalDelKeysSize(v->files_[level]);
+
+      //lhh add
+      AllFileSizeAndDelKeysBytes2(v->files_[level], level_bytes, level_del_keys_bytes);
+      del_keys_bytes[level] = level_del_keys_bytes;
+      files_bytes[level] = level_bytes;
       score =
-              static_cast<double>(level_bytes + level_del_file_bytes)  / MaxBytesForLevel(options_, level);
+              static_cast<double>(level_bytes + level_del_keys_bytes * config::kDelKeyScoreWeightCoef)  / MaxBytesForLevel(options_, level);
     }
 
     if (score > best_score) {
@@ -1104,7 +1163,9 @@ void VersionSet::Finalize(Version* v) {
       best_score = score;
     }
   }
-
+  //lhh add
+  if (del_keys_bytes[best_level] > files_bytes[best_level] * config::kDelDataDealTriggerPercent)
+    best_score *= config::kScoreAmplifyCoef;
   v->compaction_level_ = best_level;
   v->compaction_score_ = best_score;
 }
@@ -1130,7 +1191,7 @@ Status VersionSet::WriteSnapshot(log::Writer* log) {
     const std::vector<FileMetaData*>& files = current_->files_[level];
     for (size_t i = 0; i < files.size(); i++) {
       const FileMetaData* f = files[i];
-      edit.AddFile(level, f->number, f->file_size, f->is_del_key_file, f->smallest, f->largest);
+      edit.AddFile(level, f->number, f->file_size, f->del_keys_bytes, f->smallest, f->largest);
     }
   }
 
@@ -1296,6 +1357,23 @@ Iterator* VersionSet::MakeInputIterator(Compaction* c) {
   Iterator* result = NewMergingIterator(&icmp_, list, num);
   delete[] list;
   return result;
+}
+
+void VersionSet::PickTrivialMoveFiles(Compaction* c){
+  int level;
+  level = current_->compaction_level_;
+  assert(level >= 0);
+  assert(level+1 < config::kNumLevels);
+  std::vector<FileMetaData*> overlap_files;
+  for (size_t i = 0; i < current_->files_[level].size(); i++) {
+    FileMetaData* f = current_->files_[level][i];
+    current_->GetOverlappingInputs(level+1, &(f->smallest), &(f->largest), &overlap_files);
+    if (overlap_files.empty()){
+      c->edit()->DeleteFile(c->level(), f->number);
+      c->edit()->AddFile(c->level() + 1, f->number, f->file_size, f->del_keys_bytes,
+                         f->smallest, f->largest);
+    }
+  }
 }
 
 Compaction* VersionSet::PickCompaction() {

@@ -67,11 +67,11 @@ struct DBImpl::CompactionState {
     uint64_t file_size;
     InternalKey smallest, largest;
     //lhh add
-    uint64_t del_key_size;
+    uint64_t del_keys_bytes;
 
-    bool isDelKeyFile() const {
-      return ((del_key_size / 1.0) / file_size >= config::kDelKeyFileTrigger);
-    }
+//    bool isDelKeyFile() const {
+//      return ((del_key_bytes / 1.0) / file_size >= config::kDelKeyFileTrigger);
+//    }
   };
   std::vector<Output> outputs;
 
@@ -534,7 +534,7 @@ Status DBImpl::WriteLevel0Table(MemTable* mem, VersionEdit* edit,
     if (base != NULL) {
       level = base->PickLevelForMemTableOutput(min_user_key, max_user_key);
     }
-    edit->AddFile(level, meta.number, meta.file_size, meta.is_del_key_file,
+    edit->AddFile(level, meta.number, meta.file_size, meta.del_keys_bytes,
                   meta.smallest, meta.largest);
   }
 
@@ -656,6 +656,14 @@ void DBImpl::RecordBackgroundError(const Status& s) {
     bg_cv_.SignalAll();
   }
 }
+//lhh add
+bool DBImpl::NeedScheduleExtraTrivialMove(int level){
+  //mutex_.AssertHeld();
+  uint64_t level_bytes;
+  uint64_t level_del_keys_bytes;
+  versions_->TotalFileSizeAndDelKeysBytes(level, level_bytes, level_del_keys_bytes);
+  return (level_del_keys_bytes > level_bytes * config::kDelDataDealTriggerPercent);
+}
 
 void DBImpl::MaybeScheduleCompaction() {
   mutex_.AssertHeld();
@@ -732,22 +740,40 @@ void DBImpl::BackgroundCompaction() {
   } else if (!is_manual && c->IsTrivialMove()) {
     // Move file to next level
     assert(c->num_input_files(0) == 1);
-    FileMetaData* f = c->input(0, 0);
-    DBStat::UpdateWhileTrivialMove(c->level());
-    c->edit()->DeleteFile(c->level(), f->number);
-    c->edit()->AddFile(c->level() + 1, f->number, f->file_size, f->is_del_key_file,
-                       f->smallest, f->largest);
+    //lhh add
+    if (NeedScheduleExtraTrivialMove(c->level())){
+      versions_->PickTrivialMoveFiles(c);
+      for (int i = 0;i < c->num_input_files(0);++i)
+        DBStat::UpdateWhileTrivialMove(c->level());
+    } else {
+      FileMetaData* f = c->input(0, 0);
+      DBStat::UpdateWhileTrivialMove(c->level());
+      c->edit()->DeleteFile(c->level(), f->number);
+      c->edit()->AddFile(c->level() + 1, f->number, f->file_size, f->del_keys_bytes,
+                         f->smallest, f->largest);
+    }
     status = versions_->LogAndApply(c->edit(), &mutex_);
     if (!status.ok()) {
       RecordBackgroundError(status);
     }
     VersionSet::LevelSummaryStorage tmp;
-    Log(options_.info_log, "Moved #%lld to level-%d %lld bytes %s: %s\n",
+    //lhh delete
+//    Log(options_.info_log, "Moved #%lld to level-%d %lld bytes %s: %s\n",
+//        static_cast<unsigned long long>(f->number),
+//        c->level() + 1,
+//        static_cast<unsigned long long>(f->file_size),
+//        status.ToString().c_str(),
+//        versions_->LevelSummary(&tmp));
+    //lhh add
+    for (int i = 0;i < c->num_input_files(0);++i){
+      FileMetaData* f = c->input(0, i);
+      Log(options_.info_log, "Moved #%lld to level-%d %lld bytes %s: %s\n",
         static_cast<unsigned long long>(f->number),
         c->level() + 1,
         static_cast<unsigned long long>(f->file_size),
         status.ToString().c_str(),
         versions_->LevelSummary(&tmp));
+    }
   } else {
     CompactionState* compact = new CompactionState(c);
     status = DoCompactionWork(compact);
@@ -811,7 +837,7 @@ Status DBImpl::OpenCompactionOutputFile(CompactionState* compact) {
     pending_outputs_.insert(file_number);
     CompactionState::Output out;
     out.number = file_number;
-    out.del_key_size = 0;
+    out.del_keys_bytes = 0;
     out.smallest.Clear();
     out.largest.Clear();
     compact->outputs.push_back(out);
@@ -849,7 +875,7 @@ Status DBImpl::FinishCompactionOutputFile(CompactionState* compact,
   compact->total_bytes += current_bytes;
   //lhh add
   const uint64_t current_del_key_bytes = compact->builder->DelKeySize();
-  compact->current_output()->del_key_size = current_del_key_bytes;
+  compact->current_output()->del_keys_bytes = current_del_key_bytes;
 
   delete compact->builder;
   compact->builder = NULL;
@@ -900,7 +926,7 @@ Status DBImpl::InstallCompactionResults(CompactionState* compact) {
     const CompactionState::Output& out = compact->outputs[i];
     compact->compaction->edit()->AddFile(
         level + 1,
-        out.number, out.file_size, out.isDelKeyFile(), out.smallest, out.largest);
+        out.number, out.file_size, out.del_keys_bytes, out.smallest, out.largest);
   }
   return versions_->LogAndApply(compact->compaction->edit(), &mutex_);
 }
