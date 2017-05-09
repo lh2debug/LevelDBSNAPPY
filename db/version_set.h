@@ -273,6 +273,9 @@ class VersionSet {
   void TotalFileSizeAndDelKeysBytes(int level, uint64_t &file_bytes, uint64_t &del_keys_bytes);
 
   void PickTrivialMoveFiles(Compaction *c);
+
+  bool IsTooMuchDelData(uint64_t level_bytes, uint64_t level_del_keys_bytes);
+
  private:
   class Builder;
 
@@ -326,6 +329,7 @@ class VersionSet {
   // No copying allowed
   VersionSet(const VersionSet&);
   void operator=(const VersionSet&);
+
 
 
 };

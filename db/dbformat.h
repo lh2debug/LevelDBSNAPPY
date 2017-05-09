@@ -52,6 +52,9 @@ static const double kDelKeyScoreWeightCoef = 10.0;
 //lhh add
 static const double kScoreAmplifyCoef = 2.0;
 
+//lhh add
+static bool kIsTooMuchDelData = false;
+
 }  // namespace config
 
 class InternalKey;

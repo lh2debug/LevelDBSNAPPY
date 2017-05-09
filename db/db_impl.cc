@@ -658,11 +658,11 @@ void DBImpl::RecordBackgroundError(const Status& s) {
 }
 //lhh add
 bool DBImpl::NeedScheduleExtraTrivialMove(int level){
-  //mutex_.AssertHeld();
+  mutex_.AssertHeld();
   uint64_t level_bytes;
   uint64_t level_del_keys_bytes;
   versions_->TotalFileSizeAndDelKeysBytes(level, level_bytes, level_del_keys_bytes);
-  return (level_del_keys_bytes > level_bytes * config::kDelDataDealTriggerPercent);
+  return (versions_->IsTooMuchDelData(level_bytes, level_del_keys_bytes));
 }
 
 void DBImpl::MaybeScheduleCompaction() {
@@ -1314,7 +1314,9 @@ Status DBImpl::Write(const WriteOptions& options, WriteBatch* my_batch) {
   if (!writers_.empty()) {
     writers_.front()->cv.Signal();
   }
-
+  //lhh add
+  if (config::kIsTooMuchDelData)
+    MaybeScheduleCompaction();
   return status;
 }
 

@@ -1114,6 +1114,11 @@ Version* VersionSet::GetCurrentVersion() const {
   return current_;
 }
 
+bool VersionSet::IsTooMuchDelData(uint64_t level_bytes, uint64_t level_del_keys_bytes){
+  config::kIsTooMuchDelData = (level_del_keys_bytes > level_bytes * config::kDelDataDealTriggerPercent);
+  return config::kIsTooMuchDelData;
+}
+
 void VersionSet::Finalize(Version* v) {
   // Precomputed best level for next compaction
   int best_level = -1;
@@ -1164,7 +1169,8 @@ void VersionSet::Finalize(Version* v) {
     }
   }
   //lhh add
-  if (del_keys_bytes[best_level] > files_bytes[best_level] * config::kDelDataDealTriggerPercent)
+//  if (del_keys_bytes[best_level] > files_bytes[best_level] * config::kDelDataDealTriggerPercent)
+  if (IsTooMuchDelData(files_bytes[best_level], del_keys_bytes[best_level]))
     best_score *= config::kScoreAmplifyCoef;
   v->compaction_level_ = best_level;
   v->compaction_score_ = best_score;
