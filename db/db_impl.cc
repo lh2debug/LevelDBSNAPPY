@@ -1537,7 +1537,7 @@ bool DBImpl::GetProperty(const Slice& property, std::string* value) {
     DBStat::PrintCompactResult(os);
     *value = os.str();
     return true;
-  } else if (in == "iostat") {
+  } else if (in == "deliostat") {
     std::ostringstream os;
     DBStat::PrintDelCompactIO(os);
     *value = os.str();
