@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/write_batch_test.dir/db/write_batch_test.cc.o  -o write_batch_test -rdynamic libleveldb-testharness.a libleveldb_static.a -lpthread 

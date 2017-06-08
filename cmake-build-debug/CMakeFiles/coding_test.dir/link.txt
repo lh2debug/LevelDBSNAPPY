@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/coding_test.dir/util/coding_test.cc.o  -o coding_test -rdynamic libleveldb-testharness.a libleveldb_static.a -lpthread 

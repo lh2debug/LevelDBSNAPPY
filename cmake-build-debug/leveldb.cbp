@@ -1,0 +1,1644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="leveldb"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="db_bench">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/db_bench" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 db_bench"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="db_bench/fast">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/db_bench" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 db_bench/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test">
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 test"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="write_batch_test">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/write_batch_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 write_batch_test"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="write_batch_test/fast">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/write_batch_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 write_batch_test/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="version_set_test">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/version_set_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 version_set_test"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="version_set_test/fast">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/version_set_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 version_set_test/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="coding_test">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/coding_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 coding_test"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="coding_test/fast">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/coding_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 coding_test/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="memenv_test">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/memenv_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 memenv_test"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="memenv_test/fast">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/memenv_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 memenv_test/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="dbformat_test">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/dbformat_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 dbformat_test"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="dbformat_test/fast">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/dbformat_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 dbformat_test/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="bloom_test">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/bloom_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 bloom_test"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="bloom_test/fast">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/bloom_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 bloom_test/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="autocompact_test">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/autocompact_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 autocompact_test"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="autocompact_test/fast">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/autocompact_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 autocompact_test/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="leveldb_static">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/libleveldb_static.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 leveldb_static"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="leveldb_static/fast">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/libleveldb_static.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 leveldb_static/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="db_test">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/db_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 db_test"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="db_test/fast">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/db_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 db_test/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="issue200_test">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/issue200_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 issue200_test"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="issue200_test/fast">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/issue200_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 issue200_test/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="arena_test">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/arena_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 arena_test"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="arena_test/fast">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/arena_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 arena_test/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="version_edit_test">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/version_edit_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 version_edit_test"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="version_edit_test/fast">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/version_edit_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 version_edit_test/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="env_test">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/env_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 env_test"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="env_test/fast">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/env_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 env_test/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="c_test">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/c_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 c_test"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="c_test/fast">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/c_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 c_test/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="leveldb">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/libleveldb.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 leveldb"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="leveldb/fast">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/libleveldb.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 leveldb/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cache_test">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/cache_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 cache_test"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cache_test/fast">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/cache_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 cache_test/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="skiplist_test">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/skiplist_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 skiplist_test"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="skiplist_test/fast">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/skiplist_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 skiplist_test/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="leveldb-testharness">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/libleveldb-testharness.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 leveldb-testharness"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="leveldb-testharness/fast">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/libleveldb-testharness.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 leveldb-testharness/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="crc32c_test">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/crc32c_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 crc32c_test"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="crc32c_test/fast">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/crc32c_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 crc32c_test/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="filename_test">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/filename_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 filename_test"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="filename_test/fast">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/filename_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 filename_test/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="corruption_test">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/corruption_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 corruption_test"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="corruption_test/fast">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/corruption_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 corruption_test/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="filter_block_test">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/filter_block_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 filter_block_test"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="filter_block_test/fast">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/filter_block_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 filter_block_test/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="issue178_test">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/issue178_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 issue178_test"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="issue178_test/fast">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/issue178_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 issue178_test/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="table_test">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/table_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 table_test"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="table_test/fast">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/table_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 table_test/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="log_test">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/log_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 log_test"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="log_test/fast">
+				<Option output="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/log_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lh2debug/LevelDBSNAPPY/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DLEVELDB_PLATFORM_POSIX"/>
+					<Add option="-DSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/include"/>
+					<Add directory="/home/lh2debug/LevelDBSNAPPY/snappy"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 log_test/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lh2debug/LevelDBSNAPPY/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/lh2debug/LevelDBSNAPPY/db/autocompact_test.cc">
+			<Option target="autocompact_test"/>
+		</Unit>
+		<Unit filename="/home/lh2debug/LevelDBSNAPPY/db/c_test.c">
+			<Option target="c_test"/>
+		</Unit>
+		<Unit filename="/home/lh2debug/LevelDBSNAPPY/db/corruption_test.cc">
+			<Option target="corruption_test"/>
+		</Unit>
+		<Unit filename="/home/lh2debug/LevelDBSNAPPY/db/db_bench.cc">
+			<Option target="db_bench"/>
+		</Unit>
+		<Unit filename="/home/lh2debug/LevelDBSNAPPY/db/db_test.cc">
+			<Option target="db_test"/>
+		</Unit>
+		<Unit filename="/home/lh2debug/LevelDBSNAPPY/db/dbformat_test.cc">
+			<Option target="dbformat_test"/>
+		</Unit>
+		<Unit filename="/home/lh2debug/LevelDBSNAPPY/db/filename_test.cc">
+			<Option target="filename_test"/>
+		</Unit>
+		<Unit filename="/home/lh2debug/LevelDBSNAPPY/db/log_test.cc">
+			<Option target="log_test"/>
+		</Unit>
+		<Unit filename="/home/lh2debug/LevelDBSNAPPY/db/skiplist_test.cc">
+			<Option target="skiplist_test"/>
+		</Unit>
+		<Unit filename="/home/lh2debug/LevelDBSNAPPY/db/version_edit_test.cc">
+			<Option target="version_edit_test"/>
+		</Unit>
+		<Unit filename="/home/lh2debug/LevelDBSNAPPY/db/version_set_test.cc">
+			<Option target="version_set_test"/>
+		</Unit>
+		<Unit filename="/home/lh2debug/LevelDBSNAPPY/db/write_batch_test.cc">
+			<Option target="write_batch_test"/>
+		</Unit>
+		<Unit filename="/home/lh2debug/LevelDBSNAPPY/helpers/memenv/memenv_test.cc">
+			<Option target="memenv_test"/>
+		</Unit>
+		<Unit filename="/home/lh2debug/LevelDBSNAPPY/issues/issue178_test.cc">
+			<Option target="issue178_test"/>
+		</Unit>
+		<Unit filename="/home/lh2debug/LevelDBSNAPPY/issues/issue200_test.cc">
+			<Option target="issue200_test"/>
+		</Unit>
+		<Unit filename="/home/lh2debug/LevelDBSNAPPY/table/filter_block_test.cc">
+			<Option target="filter_block_test"/>
+		</Unit>
+		<Unit filename="/home/lh2debug/LevelDBSNAPPY/table/table_test.cc">
+			<Option target="table_test"/>
+		</Unit>
+		<Unit filename="/home/lh2debug/LevelDBSNAPPY/util/arena_test.cc">
+			<Option target="arena_test"/>
+		</Unit>
+		<Unit filename="/home/lh2debug/LevelDBSNAPPY/util/bloom_test.cc">
+			<Option target="bloom_test"/>
+		</Unit>
+		<Unit filename="/home/lh2debug/LevelDBSNAPPY/util/cache_test.cc">
+			<Option target="cache_test"/>
+		</Unit>
+		<Unit filename="/home/lh2debug/LevelDBSNAPPY/util/coding_test.cc">
+			<Option target="coding_test"/>
+		</Unit>
+		<Unit filename="/home/lh2debug/LevelDBSNAPPY/util/crc32c_test.cc">
+			<Option target="crc32c_test"/>
+		</Unit>
+		<Unit filename="/home/lh2debug/LevelDBSNAPPY/util/env_test.cc">
+			<Option target="env_test"/>
+		</Unit>
+		<Unit filename="/home/lh2debug/LevelDBSNAPPY/util/testharness.cc">
+			<Option target="leveldb-testharness"/>
+		</Unit>
+		<Unit filename="/home/lh2debug/LevelDBSNAPPY/util/testharness.h">
+			<Option target="leveldb-testharness"/>
+		</Unit>
+		<Unit filename="/home/lh2debug/LevelDBSNAPPY/util/testutil.cc">
+			<Option target="leveldb-testharness"/>
+		</Unit>
+		<Unit filename="/home/lh2debug/LevelDBSNAPPY/util/testutil.h">
+			<Option target="leveldb-testharness"/>
+		</Unit>
+		<Unit filename="/home/lh2debug/LevelDBSNAPPY/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

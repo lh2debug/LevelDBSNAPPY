@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/version_set_test.dir/db/version_set_test.cc.o  -o version_set_test -rdynamic libleveldb-testharness.a libleveldb_static.a -lpthread 

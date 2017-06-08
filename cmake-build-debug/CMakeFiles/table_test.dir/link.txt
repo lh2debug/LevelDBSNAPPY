@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/table_test.dir/table/table_test.cc.o  -o table_test -rdynamic libleveldb-testharness.a libleveldb_static.a -lpthread 

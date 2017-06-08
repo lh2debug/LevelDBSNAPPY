@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/bloom_test.dir/util/bloom_test.cc.o  -o bloom_test -rdynamic libleveldb-testharness.a libleveldb_static.a -lpthread 

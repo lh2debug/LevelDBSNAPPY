@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/skiplist_test.dir/db/skiplist_test.cc.o  -o skiplist_test -rdynamic libleveldb-testharness.a libleveldb_static.a -lpthread 

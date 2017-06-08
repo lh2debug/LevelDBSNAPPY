@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/arena_test.dir/util/arena_test.cc.o  -o arena_test -rdynamic libleveldb-testharness.a libleveldb_static.a -lpthread 

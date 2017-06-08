@@ -129,6 +129,9 @@ class DBImpl : public DB {
   bool owns_cache_;
   const std::string dbname_;
 
+  //lhh add
+	const std::string db_ssd_path_;
+
   // table_cache_ provides its own synchronization
   TableCache* table_cache_;
 

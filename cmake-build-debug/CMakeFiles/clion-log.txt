@@ -1,0 +1,27 @@
+/home/lh2debug/clion-2017.1.2/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/lh2debug/LevelDBSNAPPY
+Configuration: Debug
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Configuring done
+CMake Error at CMakeLists.txt:190 (add_library):
+  Cannot find source file:
+
+    snappy/snappy.cc
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .m .M .mm .h .hh .h++ .hm .hpp
+  .hxx .in .txx
+
+
+CMake Error: Cannot determine link language for target "leveldb_static".
+CMake Error: CMake can not determine linker language for target: leveldb_static
+CMake Error: CMake can not determine linker language for target: leveldb
+CMake Error: Cannot determine link language for target "leveldb".
+-- Generating done
+-- Build files have been written to: /home/lh2debug/LevelDBSNAPPY/cmake-build-debug
