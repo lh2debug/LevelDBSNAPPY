@@ -6,6 +6,7 @@
 #define STORAGE_LEVELDB_INCLUDE_OPTIONS_H_
 
 #include <stddef.h>
+#include <string>
 
 namespace leveldb {
 
@@ -154,7 +155,7 @@ struct Options {
   const FilterPolicy* filter_policy;
 
   //lhh add
-  const std::string db_ssd_path;
+  std::string db_ssd_path;
 
   // Create an Options object with default values for all fields.
   Options();

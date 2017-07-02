@@ -6,5 +6,5 @@ C_FLAGS = -g   -fno-builtin-memcmp
 
 C_DEFINES = -DLEVELDB_PLATFORM_POSIX -DOS_LINUX -DSNAPPY
 
-C_INCLUDES = -I/home/lh2debug/LevelDBSNAPPY -I/home/lh2debug/LevelDBSNAPPY/include -I/home/lh2debug/LevelDBSNAPPY/snappy 
+C_INCLUDES = -I/home/lh2debug/mycode/LevelDBSNAPPY -I/home/lh2debug/mycode/LevelDBSNAPPY/include -I/home/lh2debug/mycode/LevelDBSNAPPY/snappy 
 

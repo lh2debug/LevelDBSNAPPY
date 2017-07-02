@@ -144,7 +144,7 @@ DBImpl::DBImpl(const Options& raw_options, const std::string& dbname)
       seed_(0),
       tmp_batch_(new WriteBatch),
       bg_compaction_scheduled_(false),
-			db_ssd_path_(db_ssd_path),
+			db_ssd_path_(raw_options.db_ssd_path),
       manual_compaction_(NULL) {
   has_imm_.Release_Store(NULL);
 
@@ -1668,14 +1668,14 @@ Status DestroyDB(const std::string& dbname, const Options& options) {
   }
 
   //lhh add
-  std::string& db_ssd_path = options.db_ssd_path;
+  const std::string& db_ssd_path = options.db_ssd_path;
   env->GetChildren(db_ssd_path, &filenames);
   if (filenames.empty()) {
     return Status::OK();
   }
 
-  const std::string lockname = LockFileName(db_ssd_path);
-  Status result = env->LockFile(lockname, &lock);
+  const std::string ssdlockname = LockFileName(db_ssd_path);
+  result = env->LockFile(ssdlockname, &lock);
   if (result.ok()) {
     uint64_t number;
     FileType type;
@@ -1689,7 +1689,7 @@ Status DestroyDB(const std::string& dbname, const Options& options) {
       }
     }
     env->UnlockFile(lock);  // Ignore error since state is already gone
-    env->DeleteFile(lockname);
+    env->DeleteFile(ssdlockname);
     env->DeleteDir(db_ssd_path);  // Ignore error in case dir contains other files
   }
 
