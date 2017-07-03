@@ -138,6 +138,9 @@ class Version {
   // List of files per level
   std::vector<FileMetaData*> files_[config::kNumLevels];
 
+  //lhh add
+  std::vector<FileMetaData*> del_buf_files_[config::kNumLevels];
+
   // Next file to compact based on seek stats.
   FileMetaData* file_to_compact_;
   int file_to_compact_level_;

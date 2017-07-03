@@ -78,6 +78,9 @@ class MemTable {
   Arena arena_;
   Table table_;
 
+  //lhh add
+  int del_key_bytes;
+
   // No copying allowed
   MemTable(const MemTable&);
   void operator=(const MemTable&);
