@@ -575,6 +575,8 @@ int Version::PickLevelForMemTableOutput(
   return level;
 }
 
+
+
 // Store in "*inputs" all files in "level" that overlap [begin,end]
 void Version::GetOverlappingInputs(
     int level,
@@ -618,6 +620,54 @@ void Version::GetOverlappingInputs(
     }
   }
 }
+
+void Version::AddDelBufferOverlappingInputs(
+    int level,
+    const InternalKey* begin,
+    const InternalKey* end,
+    std::vector<FileMetaData*>* inputs) {
+  assert(level >= 0);
+  assert(level < config::kNumLevels);
+
+  //inputs->clear();
+
+  Slice user_begin, user_end;
+
+  if (begin != NULL) {
+    user_begin = begin->user_key();
+  }
+  if (end != NULL) {
+    user_end = end->user_key();
+  }
+
+  const Comparator* user_cmp = vset_->icmp_.user_comparator();
+  for (size_t i = 0; i < del_buf_files_[level].size(); ) {
+    FileMetaData* f = del_buf_files_[level][i++];
+    const Slice file_start = f->smallest.user_key();
+    const Slice file_limit = f->largest.user_key();
+    if (begin != NULL && user_cmp->Compare(file_limit, user_begin) < 0) {
+      // "f" is completely before specified range; skip it
+    } else if (end != NULL && user_cmp->Compare(file_start, user_end) > 0) {
+      // "f" is completely after specified range; skip it
+    } else {
+      inputs->push_back(f);
+      if (level == 0) {
+        // Level-0 files may overlap each other.  So check if the newly
+        // added file has expanded the range.  If so, restart search.
+        if (begin != NULL && user_cmp->Compare(file_start, user_begin) < 0) {
+          user_begin = file_start;
+          inputs->clear();
+          i = 0;
+        } else if (end != NULL && user_cmp->Compare(file_limit, user_end) > 0) {
+          user_end = file_limit;
+          inputs->clear();
+          i = 0;
+        }
+      }
+    }
+  }
+}
+
 
 std::string Version::DebugString() const {
   std::string r;
@@ -1481,6 +1531,12 @@ void VersionSet::SetupOtherInputs(Compaction* c) {
       }
     }
   }
+
+
+  //lhh add
+  current_->AddDelBufferOverlappingInputs(level+1, &all_start, &all_limit, &c->inputs_[1]);
+
+  GetRange2(c->inputs_[0], c->inputs_[1], &all_start, &all_limit);
 
   // Compute the set of grandparent files that overlap this compaction
   // (parent == level+1; grandparent == level+2)
