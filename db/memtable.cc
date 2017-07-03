@@ -104,6 +104,10 @@ void MemTable::Add(SequenceNumber s, ValueType type,
   memcpy(p, value.data(), val_size);
   assert((p + val_size) - buf == encoded_len);
   table_.Insert(buf);
+  //lhh add
+  //lhh 1 mean the size of keytype
+  if (type == kTypeDeletion)
+    del_key_bytes += key_size + 1;
 }
 
 bool MemTable::Get(const LookupKey& key, std::string* value, Status* s) {
