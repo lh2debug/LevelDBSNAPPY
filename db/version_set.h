@@ -403,6 +403,9 @@ class Compaction {
   // Each compaction reads inputs from "level_" and "level_+1"
   std::vector<FileMetaData*> inputs_[2];      // The two sets of inputs
 
+  //lhh add
+  std::vector<FileMetaData*> del_buf_inputs_;
+
   // State used to check for number of of overlapping grandparent files
   // (parent == level_ + 1, grandparent == level_ + 2)
   std::vector<FileMetaData*> grandparents_;
