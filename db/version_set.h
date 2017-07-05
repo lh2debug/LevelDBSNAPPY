@@ -97,7 +97,7 @@ class Version {
 
 
   //lhh add
-  void AddDelBufferOverlappingInputs(
+  void GetDelBufferOverlappingInputs(
       int level,
       const InternalKey* begin,         // NULL means before all keys
       const InternalKey* end,           // NULL means after all keys

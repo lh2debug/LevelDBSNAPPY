@@ -621,7 +621,7 @@ void Version::GetOverlappingInputs(
   }
 }
 
-void Version::AddDelBufferOverlappingInputs(
+void Version::GetDelBufferOverlappingInputs(
     int level,
     const InternalKey* begin,
     const InternalKey* end,
@@ -629,7 +629,7 @@ void Version::AddDelBufferOverlappingInputs(
   assert(level >= 0);
   assert(level < config::kNumLevels);
 
-  //inputs->clear();
+  inputs->clear();
 
   Slice user_begin, user_end;
 
@@ -651,19 +651,19 @@ void Version::AddDelBufferOverlappingInputs(
       // "f" is completely after specified range; skip it
     } else {
       inputs->push_back(f);
-      if (level == 0) {
-        // Level-0 files may overlap each other.  So check if the newly
-        // added file has expanded the range.  If so, restart search.
-        if (begin != NULL && user_cmp->Compare(file_start, user_begin) < 0) {
-          user_begin = file_start;
-          inputs->clear();
-          i = 0;
-        } else if (end != NULL && user_cmp->Compare(file_limit, user_end) > 0) {
-          user_end = file_limit;
-          inputs->clear();
-          i = 0;
-        }
-      }
+//      if (level == 0) {
+//        // Level-0 files may overlap each other.  So check if the newly
+//        // added file has expanded the range.  If so, restart search.
+//        if (begin != NULL && user_cmp->Compare(file_start, user_begin) < 0) {
+//          user_begin = file_start;
+//          inputs->clear();
+//          i = 0;
+//        } else if (end != NULL && user_cmp->Compare(file_limit, user_end) > 0) {
+//          user_end = file_limit;
+//          inputs->clear();
+//          i = 0;
+//        }
+//      }
     }
   }
 }
@@ -1534,7 +1534,7 @@ void VersionSet::SetupOtherInputs(Compaction* c) {
 
 
   //lhh add
-  current_->AddDelBufferOverlappingInputs(level+1, &all_start, &all_limit, &c->inputs_[1]);
+  current_->GetDelBufferOverlappingInputs(level+1, &all_start, &all_limit, &c->del_buf_inputs_);
 
   GetRange2(c->inputs_[0], c->inputs_[1], &all_start, &all_limit);
 

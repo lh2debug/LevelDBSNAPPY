@@ -13,11 +13,13 @@ namespace leveldb {
 namespace {
 class MergingIterator : public Iterator {
  public:
-  MergingIterator(const Comparator* comparator, Iterator** children, int n)
+  MergingIterator(const Comparator* comparator, Iterator** children, int n, int del_buf_iter_num = 0)
       : comparator_(comparator),
         children_(new IteratorWrapper[n]),
         n_(n),
         current_(NULL),
+        del_buf_iter_num_(del_buf_iter_num),
+        cur_index_(0),
         direction_(kForward) {
     for (int i = 0; i < n; i++) {
       children_[i].Set(children[i]);
@@ -26,6 +28,12 @@ class MergingIterator : public Iterator {
 
   virtual ~MergingIterator() {
     delete[] children_;
+  }
+
+
+  //lhh add
+  virtual bool isDelBufIter() const {
+    return (cur_index_ < del_buf_iter_num_);
   }
 
   virtual bool Valid() const {
@@ -144,6 +152,10 @@ class MergingIterator : public Iterator {
   int n_;
   IteratorWrapper* current_;
 
+  //lhh add
+  int del_buf_iter_num_;
+  int cur_index_;
+
   // Which direction is the iterator moving?
   enum Direction {
     kForward,
@@ -159,8 +171,10 @@ void MergingIterator::FindSmallest() {
     if (child->Valid()) {
       if (smallest == NULL) {
         smallest = child;
+        cur_index_ = i;
       } else if (comparator_->Compare(child->key(), smallest->key()) < 0) {
         smallest = child;
+        cur_index_ = i;
       }
     }
   }
@@ -174,8 +188,10 @@ void MergingIterator::FindLargest() {
     if (child->Valid()) {
       if (largest == NULL) {
         largest = child;
+        cur_index_ = i;
       } else if (comparator_->Compare(child->key(), largest->key()) > 0) {
         largest = child;
+        cur_index_ = i;
       }
     }
   }
@@ -183,14 +199,14 @@ void MergingIterator::FindLargest() {
 }
 }  // namespace
 
-Iterator* NewMergingIterator(const Comparator* cmp, Iterator** list, int n) {
+Iterator* NewMergingIterator(const Comparator* cmp, Iterator** list, int n, int del_buf_iter_num = 0) {
   assert(n >= 0);
   if (n == 0) {
     return NewEmptyIterator();
   } else if (n == 1) {
     return list[0];
   } else {
-    return new MergingIterator(cmp, list, n);
+    return new MergingIterator(cmp, list, n, del_buf_iter_num);
   }
 }
 
