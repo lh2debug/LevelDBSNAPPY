@@ -1537,7 +1537,7 @@ void VersionSet::SetupOtherInputs(Compaction* c) {
   current_->GetDelBufferOverlappingInputs(level+1, &all_start, &all_limit, &c->del_buf_inputs_);
 
   GetRange2(c->inputs_[0], c->inputs_[1], &all_start, &all_limit);
-
+  
   // Compute the set of grandparent files that overlap this compaction
   // (parent == level+1; grandparent == level+2)
   if (level + 2 < config::kNumLevels) {

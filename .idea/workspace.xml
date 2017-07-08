@@ -38,8 +38,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dab0620e-b061-42a5-80d6-16265cbf45c3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/version_set.cc" afterPath="$PROJECT_DIR$/db/version_set.cc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/version_set.h" afterPath="$PROJECT_DIR$/db/version_set.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/table/merger.cc" afterPath="$PROJECT_DIR$/table/merger.cc" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -95,8 +93,8 @@
       <file leaf-file-name="version_set.cc" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/version_set.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="587">
-              <caret line="653" column="0" lean-forward="false" selection-start-line="653" selection-start-column="2" selection-end-line="665" selection-end-column="9" />
+            <state relative-caret-position="479">
+              <caret line="1545" column="3" lean-forward="true" selection-start-line="1545" selection-start-column="3" selection-end-line="1545" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -106,7 +104,7 @@
         <entry file="file://$PROJECT_DIR$/table/merger.cc">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="700">
-              <caret line="55" column="26" lean-forward="true" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+              <caret line="55" column="26" lean-forward="false" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -146,7 +144,7 @@
         <entry file="file://$PROJECT_DIR$/db/memtable.cc">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="519">
-              <caret line="108" column="28" lean-forward="true" selection-start-line="108" selection-start-column="28" selection-end-line="108" selection-end-column="28" />
+              <caret line="108" column="28" lean-forward="false" selection-start-line="108" selection-start-column="28" selection-end-line="108" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -178,7 +176,6 @@
       <find>PickCompaction</find>
       <find>AddDelBufferOverlappingInputs</find>
       <find>SetupOtherInputs</find>
-      <find>GetDelBufferOverlappingInputs</find>
       <find>s</find>
       <find>se</find>
       <find>set</find>
@@ -186,6 +183,7 @@
       <find>setup</find>
       <find>setupo</find>
       <find>GetOverlappingInputs</find>
+      <find>GetDelBufferOverlappingInputs</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -540,12 +538,12 @@
       <option name="presentableId" value="Default" />
       <updated>1499042450385</updated>
       <workItem from="1499042454434" duration="163000" />
-      <workItem from="1499043795507" duration="24493000" />
+      <workItem from="1499043795507" duration="28455000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24656000" />
+    <option name="totallyTimeSpent" value="28618000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="25" width="1922" height="1032" extended-state="6" />
@@ -608,7 +606,7 @@
     <entry file="file://$PROJECT_DIR$/db/memtable.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="519">
-          <caret line="108" column="28" lean-forward="true" selection-start-line="108" selection-start-column="28" selection-end-line="108" selection-end-column="28" />
+          <caret line="108" column="28" lean-forward="false" selection-start-line="108" selection-start-column="28" selection-end-line="108" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -648,7 +646,7 @@
     <entry file="file://$PROJECT_DIR$/table/merger.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="700">
-          <caret line="55" column="26" lean-forward="true" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+          <caret line="55" column="26" lean-forward="false" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -663,8 +661,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/version_set.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="653" column="0" lean-forward="false" selection-start-line="653" selection-start-column="2" selection-end-line="665" selection-end-column="9" />
+        <state relative-caret-position="479">
+          <caret line="1545" column="3" lean-forward="true" selection-start-line="1545" selection-start-column="3" selection-end-line="1545" selection-end-column="3" />
           <folding />
         </state>
       </provider>
