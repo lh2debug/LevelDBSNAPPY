@@ -113,6 +113,8 @@ class MemTableInserter : public WriteBatch::Handler {
  public:
   SequenceNumber sequence_;
   MemTable* mem_;
+  //lhh add
+  MemTable* del_mem_;
 
   virtual void Put(const Slice& key, const Slice& value) {
     mem_->Add(sequence_, kTypeValue, key, value);
@@ -120,16 +122,20 @@ class MemTableInserter : public WriteBatch::Handler {
   }
   virtual void Delete(const Slice& key) {
     mem_->Add(sequence_, kTypeDeletion, key, Slice());
+    //lhh add
+    del_mem_->Add(sequence_, kTypeDeletion, key, Slice());
     sequence_++;
   }
 };
 }  // namespace
 
 Status WriteBatchInternal::InsertInto(const WriteBatch* b,
-                                      MemTable* memtable) {
+                                      MemTable* memtable, MemTable* del_memtable) {
   MemTableInserter inserter;
   inserter.sequence_ = WriteBatchInternal::Sequence(b);
   inserter.mem_ = memtable;
+  //lhh add
+  inserter.del_mem_ = del_memtable;
   return b->Iterate(&inserter);
 }
 

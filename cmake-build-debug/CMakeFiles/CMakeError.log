@@ -1,24 +1,24 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/lh2debug/mycode/LevelDBSNAPPY/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_11814/fast"
-/usr/bin/make -f CMakeFiles/cmTC_11814.dir/build.make CMakeFiles/cmTC_11814.dir/build
-make[1]: Entering directory '/home/lh2debug/mycode/LevelDBSNAPPY/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_11814.dir/CheckSymbolExists.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_11814.dir/CheckSymbolExists.c.o   -c /home/lh2debug/mycode/LevelDBSNAPPY/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_11814
-/home/lh2debug/clion-2017.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_11814.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_11814.dir/CheckSymbolExists.c.o  -o cmTC_11814 -rdynamic 
-CMakeFiles/cmTC_11814.dir/CheckSymbolExists.c.o: In function `main':
+Run Build Command:"/usr/bin/make" "cmTC_a2b46/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a2b46.dir/build.make CMakeFiles/cmTC_a2b46.dir/build
+make[1]: Entering directory '/home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a2b46.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_a2b46.dir/CheckSymbolExists.c.o   -c /home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_a2b46
+/home/lh2debug/clion-2017.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a2b46.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_a2b46.dir/CheckSymbolExists.c.o  -o cmTC_a2b46 -rdynamic 
+CMakeFiles/cmTC_a2b46.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_11814.dir/build.make:97: recipe for target 'cmTC_11814' failed
-make[1]: *** [cmTC_11814] Error 1
-make[1]: Leaving directory '/home/lh2debug/mycode/LevelDBSNAPPY/cmake-build-debug/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_11814/fast' failed
-make: *** [cmTC_11814/fast] Error 2
+CMakeFiles/cmTC_a2b46.dir/build.make:97: recipe for target 'cmTC_a2b46' failed
+make[1]: *** [cmTC_a2b46] Error 1
+make[1]: Leaving directory '/home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_a2b46/fast' failed
+make: *** [cmTC_a2b46/fast] Error 2
 
-File /home/lh2debug/mycode/LevelDBSNAPPY/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -34,22 +34,22 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/lh2debug/mycode/LevelDBSNAPPY/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_6f4be/fast"
-/usr/bin/make -f CMakeFiles/cmTC_6f4be.dir/build.make CMakeFiles/cmTC_6f4be.dir/build
-make[1]: Entering directory '/home/lh2debug/mycode/LevelDBSNAPPY/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_6f4be.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_6f4be.dir/CheckFunctionExists.c.o   -c /home/lh2debug/clion-2017.1.3/bin/cmake/share/cmake-3.7/Modules/CheckFunctionExists.c
-Linking C executable cmTC_6f4be
-/home/lh2debug/clion-2017.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6f4be.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_6f4be.dir/CheckFunctionExists.c.o  -o cmTC_6f4be -rdynamic -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTC_6365c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6365c.dir/build.make CMakeFiles/cmTC_6365c.dir/build
+make[1]: Entering directory '/home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6365c.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_6365c.dir/CheckFunctionExists.c.o   -c /home/lh2debug/clion-2017.1.3/bin/cmake/share/cmake-3.7/Modules/CheckFunctionExists.c
+Linking C executable cmTC_6365c
+/home/lh2debug/clion-2017.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6365c.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_6365c.dir/CheckFunctionExists.c.o  -o cmTC_6365c -rdynamic -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_6f4be.dir/build.make:97: recipe for target 'cmTC_6f4be' failed
-make[1]: *** [cmTC_6f4be] Error 1
-make[1]: Leaving directory '/home/lh2debug/mycode/LevelDBSNAPPY/cmake-build-debug/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_6f4be/fast' failed
-make: *** [cmTC_6f4be/fast] Error 2
+CMakeFiles/cmTC_6365c.dir/build.make:97: recipe for target 'cmTC_6365c' failed
+make[1]: *** [cmTC_6365c] Error 1
+make[1]: Leaving directory '/home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_6365c/fast' failed
+make: *** [cmTC_6365c/fast] Error 2
 
 

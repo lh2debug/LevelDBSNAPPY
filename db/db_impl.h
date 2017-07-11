@@ -144,6 +144,12 @@ class DBImpl : public DB {
   port::CondVar bg_cv_;          // Signalled when background work finishes
   MemTable* mem_;
   MemTable* imm_;                // Memtable being compacted
+
+  //lhh add
+  MemTable* del_mem_;
+  MemTable* del_imm_;
+
+
   port::AtomicPointer has_imm_;  // So bg thread can detect non-NULL imm_
   WritableFile* logfile_;
   uint64_t logfile_number_;

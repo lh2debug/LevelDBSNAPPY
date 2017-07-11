@@ -43,10 +43,10 @@ RM = /home/lh2debug/clion-2017.1.3/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lh2debug/mycode/LevelDBSNAPPY
+CMAKE_SOURCE_DIR = /home/lh2debug/code/LevelDBSNAPPY
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lh2debug/mycode/LevelDBSNAPPY/cmake-build-debug
+CMAKE_BINARY_DIR = /home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/leveldb_static.dir/depend.make
@@ -66,6 +66,6 @@ CMakeFiles/leveldb_static.dir/clean:
 .PHONY : CMakeFiles/leveldb_static.dir/clean
 
 CMakeFiles/leveldb_static.dir/depend:
-	cd /home/lh2debug/mycode/LevelDBSNAPPY/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lh2debug/mycode/LevelDBSNAPPY /home/lh2debug/mycode/LevelDBSNAPPY /home/lh2debug/mycode/LevelDBSNAPPY/cmake-build-debug /home/lh2debug/mycode/LevelDBSNAPPY/cmake-build-debug /home/lh2debug/mycode/LevelDBSNAPPY/cmake-build-debug/CMakeFiles/leveldb_static.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lh2debug/code/LevelDBSNAPPY /home/lh2debug/code/LevelDBSNAPPY /home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug /home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug /home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug/CMakeFiles/leveldb_static.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/leveldb_static.dir/depend
 

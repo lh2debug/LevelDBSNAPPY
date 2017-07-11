@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/lh2debug/mycode/LevelDBSNAPPY/util/testharness.cc" "/home/lh2debug/mycode/LevelDBSNAPPY/cmake-build-debug/CMakeFiles/leveldb-testharness.dir/util/testharness.cc.o"
-  "/home/lh2debug/mycode/LevelDBSNAPPY/util/testutil.cc" "/home/lh2debug/mycode/LevelDBSNAPPY/cmake-build-debug/CMakeFiles/leveldb-testharness.dir/util/testutil.cc.o"
+  "/home/lh2debug/code/LevelDBSNAPPY/util/testharness.cc" "/home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug/CMakeFiles/leveldb-testharness.dir/util/testharness.cc.o"
+  "/home/lh2debug/code/LevelDBSNAPPY/util/testutil.cc" "/home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug/CMakeFiles/leveldb-testharness.dir/util/testutil.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

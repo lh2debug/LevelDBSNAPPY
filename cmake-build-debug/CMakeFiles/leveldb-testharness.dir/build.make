@@ -43,10 +43,10 @@ RM = /home/lh2debug/clion-2017.1.3/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lh2debug/mycode/LevelDBSNAPPY
+CMAKE_SOURCE_DIR = /home/lh2debug/code/LevelDBSNAPPY
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lh2debug/mycode/LevelDBSNAPPY/cmake-build-debug
+CMAKE_BINARY_DIR = /home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/leveldb-testharness.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/leveldb-testharness.dir/flags.make
 
 CMakeFiles/leveldb-testharness.dir/util/testutil.cc.o: CMakeFiles/leveldb-testharness.dir/flags.make
 CMakeFiles/leveldb-testharness.dir/util/testutil.cc.o: ../util/testutil.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lh2debug/mycode/LevelDBSNAPPY/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/leveldb-testharness.dir/util/testutil.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/leveldb-testharness.dir/util/testutil.cc.o -c /home/lh2debug/mycode/LevelDBSNAPPY/util/testutil.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/leveldb-testharness.dir/util/testutil.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/leveldb-testharness.dir/util/testutil.cc.o -c /home/lh2debug/code/LevelDBSNAPPY/util/testutil.cc
 
 CMakeFiles/leveldb-testharness.dir/util/testutil.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/leveldb-testharness.dir/util/testutil.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lh2debug/mycode/LevelDBSNAPPY/util/testutil.cc > CMakeFiles/leveldb-testharness.dir/util/testutil.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lh2debug/code/LevelDBSNAPPY/util/testutil.cc > CMakeFiles/leveldb-testharness.dir/util/testutil.cc.i
 
 CMakeFiles/leveldb-testharness.dir/util/testutil.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/leveldb-testharness.dir/util/testutil.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lh2debug/mycode/LevelDBSNAPPY/util/testutil.cc -o CMakeFiles/leveldb-testharness.dir/util/testutil.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lh2debug/code/LevelDBSNAPPY/util/testutil.cc -o CMakeFiles/leveldb-testharness.dir/util/testutil.cc.s
 
 CMakeFiles/leveldb-testharness.dir/util/testutil.cc.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/leveldb-testharness.dir/util/testutil.cc.o.provides.build: CMakeFiles
 
 CMakeFiles/leveldb-testharness.dir/util/testharness.cc.o: CMakeFiles/leveldb-testharness.dir/flags.make
 CMakeFiles/leveldb-testharness.dir/util/testharness.cc.o: ../util/testharness.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lh2debug/mycode/LevelDBSNAPPY/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/leveldb-testharness.dir/util/testharness.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/leveldb-testharness.dir/util/testharness.cc.o -c /home/lh2debug/mycode/LevelDBSNAPPY/util/testharness.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/leveldb-testharness.dir/util/testharness.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/leveldb-testharness.dir/util/testharness.cc.o -c /home/lh2debug/code/LevelDBSNAPPY/util/testharness.cc
 
 CMakeFiles/leveldb-testharness.dir/util/testharness.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/leveldb-testharness.dir/util/testharness.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lh2debug/mycode/LevelDBSNAPPY/util/testharness.cc > CMakeFiles/leveldb-testharness.dir/util/testharness.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lh2debug/code/LevelDBSNAPPY/util/testharness.cc > CMakeFiles/leveldb-testharness.dir/util/testharness.cc.i
 
 CMakeFiles/leveldb-testharness.dir/util/testharness.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/leveldb-testharness.dir/util/testharness.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lh2debug/mycode/LevelDBSNAPPY/util/testharness.cc -o CMakeFiles/leveldb-testharness.dir/util/testharness.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lh2debug/code/LevelDBSNAPPY/util/testharness.cc -o CMakeFiles/leveldb-testharness.dir/util/testharness.cc.s
 
 CMakeFiles/leveldb-testharness.dir/util/testharness.cc.o.requires:
 
@@ -117,7 +117,7 @@ libleveldb-testharness.a: CMakeFiles/leveldb-testharness.dir/util/testutil.cc.o
 libleveldb-testharness.a: CMakeFiles/leveldb-testharness.dir/util/testharness.cc.o
 libleveldb-testharness.a: CMakeFiles/leveldb-testharness.dir/build.make
 libleveldb-testharness.a: CMakeFiles/leveldb-testharness.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lh2debug/mycode/LevelDBSNAPPY/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libleveldb-testharness.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libleveldb-testharness.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/leveldb-testharness.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/leveldb-testharness.dir/link.txt --verbose=$(VERBOSE)
 
@@ -136,6 +136,6 @@ CMakeFiles/leveldb-testharness.dir/clean:
 .PHONY : CMakeFiles/leveldb-testharness.dir/clean
 
 CMakeFiles/leveldb-testharness.dir/depend:
-	cd /home/lh2debug/mycode/LevelDBSNAPPY/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lh2debug/mycode/LevelDBSNAPPY /home/lh2debug/mycode/LevelDBSNAPPY /home/lh2debug/mycode/LevelDBSNAPPY/cmake-build-debug /home/lh2debug/mycode/LevelDBSNAPPY/cmake-build-debug /home/lh2debug/mycode/LevelDBSNAPPY/cmake-build-debug/CMakeFiles/leveldb-testharness.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lh2debug/code/LevelDBSNAPPY /home/lh2debug/code/LevelDBSNAPPY /home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug /home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug /home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug/CMakeFiles/leveldb-testharness.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/leveldb-testharness.dir/depend
 

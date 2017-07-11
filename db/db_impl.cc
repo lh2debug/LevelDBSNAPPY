@@ -138,6 +138,8 @@ DBImpl::DBImpl(const Options& raw_options, const std::string& dbname)
       bg_cv_(&mutex_),
       mem_(NULL),
       imm_(NULL),
+      del_mem_(NULL),
+      del_imm_(NULL),
       logfile_(NULL),
       logfile_number_(0),
       log_(NULL),
@@ -174,6 +176,11 @@ DBImpl::~DBImpl() {
   delete versions_;
   if (mem_ != NULL) mem_->Unref();
   if (imm_ != NULL) imm_->Unref();
+
+  //lhh add
+  if (del_mem_ != NULL) del_mem_->Unref();
+  if (del_imm_ != NULL) del_imm_->Unref();
+
   delete tmp_batch_;
   delete log_;
   delete logfile_;
@@ -1285,7 +1292,8 @@ Status DBImpl::Write(const WriteOptions& options, WriteBatch* my_batch) {
         }
       }
       if (status.ok()) {
-        status = WriteBatchInternal::InsertInto(updates, mem_);
+        //lhh modify
+        status = WriteBatchInternal::InsertInto(updates, mem_, del_mem_);
       }
       mutex_.Lock();
       if (sync_error) {
@@ -1600,6 +1608,13 @@ Status DB::Open(const Options& options, const std::string& dbname,
   // Recover handles create_if_missing, error_if_exists
   bool save_manifest = false;
   Status s = impl->Recover(&edit, &save_manifest);
+
+  //lhh add
+  if (s.ok()){
+    impl->del_mem_ = new MemTable(impl->internal_comparator_);
+    impl->del_mem_->Ref();
+  }
+
   if (s.ok() && impl->mem_ == NULL) {
     // Create new log and a corresponding memtable.
     uint64_t new_log_number = impl->versions_->NewFileNumber();

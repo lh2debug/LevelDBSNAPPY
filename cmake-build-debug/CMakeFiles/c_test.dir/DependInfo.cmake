@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/lh2debug/mycode/LevelDBSNAPPY/db/c_test.c" "/home/lh2debug/mycode/LevelDBSNAPPY/cmake-build-debug/CMakeFiles/c_test.dir/db/c_test.c.o"
+  "/home/lh2debug/code/LevelDBSNAPPY/db/c_test.c" "/home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug/CMakeFiles/c_test.dir/db/c_test.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -24,8 +24,8 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/lh2debug/mycode/LevelDBSNAPPY/cmake-build-debug/CMakeFiles/leveldb-testharness.dir/DependInfo.cmake"
-  "/home/lh2debug/mycode/LevelDBSNAPPY/cmake-build-debug/CMakeFiles/leveldb_static.dir/DependInfo.cmake"
+  "/home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug/CMakeFiles/leveldb-testharness.dir/DependInfo.cmake"
+  "/home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug/CMakeFiles/leveldb_static.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
