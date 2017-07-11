@@ -21,10 +21,12 @@ struct FileMetaData {
   uint64_t file_size;         // File size in bytes
   InternalKey smallest;       // Smallest internal key served by table
   InternalKey largest;        // Largest internal key served by table
+
   //lhh add
   uint64_t del_keys_bytes;
+  MemTable* del_buf;
 
-  FileMetaData() : refs(0), del_keys_bytes(0), allowed_seeks(1 << 30), file_size(0) { }
+  FileMetaData() : refs(0), del_keys_bytes(0), allowed_seeks(1 << 30), file_size(0), del_buf(NULL) { }
 };
 
 class VersionEdit {

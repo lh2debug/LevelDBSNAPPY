@@ -120,6 +120,10 @@ class DBImpl : public DB {
   Status InstallCompactionResults(CompactionState* compact)
       EXCLUSIVE_LOCKS_REQUIRED(mutex_);
 
+  //lhh add
+  void DistributeDelKeyAToLowerLevel()
+      EXCLUSIVE_LOCKS_REQUIRED(mutex_);
+
   // Constant after construction
   Env* const env_;
   const InternalKeyComparator internal_comparator_;
