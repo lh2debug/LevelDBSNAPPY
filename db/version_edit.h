@@ -9,10 +9,12 @@
 #include <utility>
 #include <vector>
 #include "db/dbformat.h"
+#include "db/memtable.h"
 
 namespace leveldb {
 
 class VersionSet;
+
 
 struct FileMetaData {
   int refs;

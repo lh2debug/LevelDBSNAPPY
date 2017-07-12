@@ -123,7 +123,8 @@ class MemTableInserter : public WriteBatch::Handler {
   virtual void Delete(const Slice& key) {
     mem_->Add(sequence_, kTypeDeletion, key, Slice());
     //lhh add
-    del_mem_->Add(sequence_, kTypeDeletion, key, Slice());
+    if (del_mem_ != NULL)
+      del_mem_->Add(sequence_, kTypeDeletion, key, Slice());
     sequence_++;
   }
 };

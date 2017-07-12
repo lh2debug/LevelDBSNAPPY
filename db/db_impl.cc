@@ -146,7 +146,6 @@ DBImpl::DBImpl(const Options& raw_options, const std::string& dbname)
       seed_(0),
       tmp_batch_(new WriteBatch),
       bg_compaction_scheduled_(false),
-			db_ssd_path_(raw_options.db_ssd_path),
       manual_compaction_(NULL) {
   has_imm_.Release_Store(NULL);
 
@@ -445,7 +444,7 @@ Status DBImpl::RecoverLogFile(uint64_t log_number, bool last_log,
       mem = new MemTable(internal_comparator_);
       mem->Ref();
     }
-    status = WriteBatchInternal::InsertInto(&batch, mem);
+    status = WriteBatchInternal::InsertInto(&batch, mem, NULL);
     MaybeIgnoreError(&status);
     if (!status.ok()) {
       break;
@@ -518,6 +517,9 @@ Status DBImpl::WriteLevel0Table(MemTable* mem, VersionEdit* edit,
   Log(options_.info_log, "Level-0 table #%llu: started",
       (unsigned long long) meta.number);
 
+  //lhh add
+  DistributeDelKeysToLowerLevel();
+
   Status s;
   {
     mutex_.Unlock();
@@ -557,6 +559,9 @@ Status DBImpl::WriteLevel0Table(MemTable* mem, VersionEdit* edit,
 void DBImpl::CompactMemTable() {
   mutex_.AssertHeld();
   assert(imm_ != NULL);
+
+  //lhh add
+  assert(del_imm_ != NULL);
 
   // Save the contents of the memtable as a new Table
   VersionEdit edit;
@@ -671,6 +676,12 @@ bool DBImpl::NeedScheduleExtraTrivialMove(int level){
   uint64_t level_del_keys_bytes;
   versions_->TotalFileSizeAndDelKeysBytes(level, level_bytes, level_del_keys_bytes);
   return (versions_->IsTooMuchDelData(level_bytes, level_del_keys_bytes));
+}
+
+//lhh add
+void DBImpl::DistributeDelKeysToLowerLevel() {
+
+
 }
 
 void DBImpl::MaybeScheduleCompaction() {
@@ -1433,6 +1444,12 @@ Status DBImpl::MakeRoomForWrite(bool force) {
       logfile_number_ = new_log_number;
       log_ = new log::Writer(lfile);
       imm_ = mem_;
+
+      //lhh add
+      del_imm_ = mem_;
+      del_mem_ = new MemTable(internal_comparator_);
+      del_mem_->Ref();
+
       has_imm_.Release_Store(imm_);
       mem_ = new MemTable(internal_comparator_);
       mem_->Ref();
@@ -1680,32 +1697,6 @@ Status DestroyDB(const std::string& dbname, const Options& options) {
     env->UnlockFile(lock);  // Ignore error since state is already gone
     env->DeleteFile(lockname);
     env->DeleteDir(dbname);  // Ignore error in case dir contains other files
-  }
-
-  //lhh add
-  const std::string& db_ssd_path = options.db_ssd_path;
-  env->GetChildren(db_ssd_path, &filenames);
-  if (filenames.empty()) {
-    return Status::OK();
-  }
-
-  const std::string ssdlockname = LockFileName(db_ssd_path);
-  result = env->LockFile(ssdlockname, &lock);
-  if (result.ok()) {
-    uint64_t number;
-    FileType type;
-    for (size_t i = 0; i < filenames.size(); i++) {
-      if (ParseFileName(filenames[i], &number, &type) &&
-          type != kDBLockFile) {  // Lock file will be deleted at end
-        Status del = env->DeleteFile(db_ssd_path + "/" + filenames[i]);
-        if (result.ok() && !del.ok()) {
-          result = del;
-        }
-      }
-    }
-    env->UnlockFile(lock);  // Ignore error since state is already gone
-    env->DeleteFile(ssdlockname);
-    env->DeleteDir(db_ssd_path);  // Ignore error in case dir contains other files
   }
 
   return result;

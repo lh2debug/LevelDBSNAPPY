@@ -154,8 +154,6 @@ struct Options {
   // Default: NULL
   const FilterPolicy* filter_policy;
 
-  //lhh add
-  std::string db_ssd_path;
 
   // Create an Options object with default values for all fields.
   Options();

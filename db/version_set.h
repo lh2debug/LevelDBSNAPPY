@@ -96,13 +96,6 @@ class Version {
       std::vector<FileMetaData*>* inputs);
 
 
-  //lhh add
-  void GetDelBufferOverlappingInputs(
-      int level,
-      const InternalKey* begin,         // NULL means before all keys
-      const InternalKey* end,           // NULL means after all keys
-      std::vector<FileMetaData*>* inputs);
-
 
 
   // Returns true iff some file in the specified level overlaps
@@ -147,9 +140,6 @@ class Version {
 
   // List of files per level
   std::vector<FileMetaData*> files_[config::kNumLevels];
-
-  //lhh add
-  std::vector<FileMetaData*> del_buf_files_[config::kNumLevels];
 
   // Next file to compact based on seek stats.
   FileMetaData* file_to_compact_;
@@ -403,8 +393,6 @@ class Compaction {
   // Each compaction reads inputs from "level_" and "level_+1"
   std::vector<FileMetaData*> inputs_[2];      // The two sets of inputs
 
-  //lhh add
-  std::vector<FileMetaData*> del_buf_inputs_;
 
   // State used to check for number of of overlapping grandparent files
   // (parent == level_ + 1, grandparent == level_ + 2)

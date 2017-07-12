@@ -121,7 +121,7 @@ class DBImpl : public DB {
       EXCLUSIVE_LOCKS_REQUIRED(mutex_);
 
   //lhh add
-  void DistributeDelKeyAToLowerLevel()
+  void DistributeDelKeysToLowerLevel()
       EXCLUSIVE_LOCKS_REQUIRED(mutex_);
 
   // Constant after construction
@@ -133,8 +133,6 @@ class DBImpl : public DB {
   bool owns_cache_;
   const std::string dbname_;
 
-  //lhh add
-  const std::string db_ssd_path_;
 
   // table_cache_ provides its own synchronization
   TableCache* table_cache_;

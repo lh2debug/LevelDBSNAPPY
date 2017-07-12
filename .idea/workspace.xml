@@ -37,8 +37,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dab0620e-b061-42a5-80d6-16265cbf45c3" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/db_impl.cc" afterPath="$PROJECT_DIR$/db/db_impl.cc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/db_impl.h" afterPath="$PROJECT_DIR$/db/db_impl.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/version_edit.h" afterPath="$PROJECT_DIR$/db/version_edit.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/version_set.cc" afterPath="$PROJECT_DIR$/db/version_set.cc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/version_set.h" afterPath="$PROJECT_DIR$/db/version_set.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/write_batch.cc" afterPath="$PROJECT_DIR$/db/write_batch.cc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/write_batch_internal.h" afterPath="$PROJECT_DIR$/db/write_batch_internal.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/leveldb/options.h" afterPath="$PROJECT_DIR$/include/leveldb/options.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/table/merger.cc" afterPath="$PROJECT_DIR$/table/merger.cc" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,51 +59,83 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="db_impl.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/db_impl.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="33" column="17" lean-forward="false" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="thread_annotations.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/port/thread_annotations.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="db_test.cc" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/db_test.cc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="2114" column="12" lean-forward="false" selection-start-line="2114" selection-start-column="2" selection-end-line="2114" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="version_edit.h" pinned="false" current-in-tab="false">
+      <file leaf-file-name="version_edit.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/version_edit.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="24" column="11" lean-forward="true" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+            <state relative-caret-position="306">
+              <caret line="26" column="11" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+              <folding>
+                <element signature="e#304#318#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db_impl.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/db_impl.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="1699" column="3" lean-forward="false" selection-start-line="1699" selection-start-column="3" selection-end-line="1699" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="db_impl.cc" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/db/db_impl.cc">
+      <file leaf-file-name="iterator.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/leveldb/iterator.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="197">
+              <caret line="74" column="17" lean-forward="false" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="iterator.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/table/iterator.cc">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="341">
-              <caret line="1263" column="16" lean-forward="false" selection-start-line="1263" selection-start-column="12" selection-end-line="1263" selection-end-column="16" />
+              <caret line="33" column="12" lean-forward="false" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="version_set.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/version_set.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="641" column="49" lean-forward="true" selection-start-line="641" selection-start-column="49" selection-end-line="641" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="merger.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/table/merger.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="write_batch_internal.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/write_batch_internal.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="41" column="101" lean-forward="false" selection-start-line="41" selection-start-column="101" selection-end-line="41" selection-end-column="101" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="write_batch.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/write_batch.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="485">
+              <caret line="154" column="0" lean-forward="false" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -111,41 +151,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="version_set.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/version_set.h">
+      <file leaf-file-name="db_bench_tree_db.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/doc/bench/db_bench_tree_db.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="148" column="26" lean-forward="false" selection-start-line="148" selection-start-column="14" selection-end-line="148" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="write_batch_internal.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/write_batch_internal.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="write_batch.cc" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/write_batch.cc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="41" column="17" lean-forward="false" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="repair.cc" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/repair.cc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="161" column="26" lean-forward="false" selection-start-line="161" selection-start-column="9" selection-end-line="161" selection-end-column="26" />
+            <state relative-caret-position="197">
+              <caret line="388" column="9" lean-forward="false" selection-start-line="388" selection-start-column="9" selection-end-line="388" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -155,36 +165,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>new Memtable)(</find>
-      <find>new Memtable)</find>
-      <find>Recover</find>
-      <find>new</find>
-      <find>new WE</find>
-      <find>new W</find>
-      <find>new Memta</find>
-      <find>ConvertLogToTable</find>
-      <find>ne</find>
-      <find>new</find>
-      <find>new M</find>
-      <find>new Me</find>
-      <find>new Memt</find>
-      <find>new Memtab</find>
-      <find>new Memtabl</find>
-      <find>new Memtable</find>
-      <find>new Memtable(</find>
-      <find>new Mem</find>
-      <find>imm_</find>
-      <find>WriteLevel0Table(</find>
-      <find>EXCLUSIVE_LOCKS_REQUIRED</find>
-      <find>MaybeScheduleCompaction(</find>
-      <find>MakeRoomForWrite(</find>
-      <find>allow_delay</find>
-      <find>w</find>
-      <find>wr</find>
-      <find>write</find>
-      <find>write(</find>
-      <find>Writer</find>
-      <find>writer(</find>
+      <find>insertin</find>
+      <find>insertint</find>
+      <find>insertinto</find>
+      <find>leveldb::NewMergingIterator</find>
+      <find>NewMergingIterator</find>
+      <find>NewMergingIterator(\</find>
+      <find>NewMergingIterator(</find>
+      <find>del_b</find>
+      <find>d</find>
+      <find>del</find>
+      <find>del_</find>
+      <find>del_bug</find>
+      <find>del_bu</find>
+      <find>del_buf</find>
+      <find>del_buf_iter_num</find>
+      <find>//lhjh</find>
+      <find>//lhj</find>
+      <find>//lh</find>
+      <find>db_ssd_path_</find>
+      <find>}</find>
+      <find>/</find>
+      <find>//</find>
+      <find>//l</find>
+      <find>//lhh</find>
+      <find>//lhh</find>
+      <find>//lhh a</find>
+      <find>//lhh ad</find>
+      <find>//lhh add</find>
+      <find>del_buf_files_</find>
+      <find>TotalFileSizeAndDelKeysBytes</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -195,13 +205,14 @@
       <list>
         <option value="$PROJECT_DIR$/db/memtable.h" />
         <option value="$PROJECT_DIR$/db/memtable.cc" />
-        <option value="$PROJECT_DIR$/table/merger.cc" />
         <option value="$PROJECT_DIR$/db/version_set.h" />
-        <option value="$PROJECT_DIR$/db/version_set.cc" />
-        <option value="$PROJECT_DIR$/db/write_batch.cc" />
-        <option value="$PROJECT_DIR$/db/db_impl.cc" />
-        <option value="$PROJECT_DIR$/db/version_edit.h" />
         <option value="$PROJECT_DIR$/db/db_impl.h" />
+        <option value="$PROJECT_DIR$/db/write_batch_internal.h" />
+        <option value="$PROJECT_DIR$/db/write_batch.cc" />
+        <option value="$PROJECT_DIR$/table/merger.cc" />
+        <option value="$PROJECT_DIR$/db/db_impl.cc" />
+        <option value="$PROJECT_DIR$/db/version_set.cc" />
+        <option value="$PROJECT_DIR$/db/version_edit.h" />
       </list>
     </option>
   </component>
@@ -230,7 +241,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="makeroom&#9;null&#9;null&#10;mays&#9;null&#9;null&#10;MAYS&#9;null&#9;null&#10;write&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/write_batch_internal.h&#10;status&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/include/leveldb/status.h&#10;compactmemt&#9;null&#9;null&#10;WRITE_BATCH&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/include/leveldb/write_batch.h&#10;db.h&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/include/leveldb/db.h&#10;dbimpl&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_impl.h&#10;dbbench&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_bench.cc&#10;dbbenc&#9;RUN_CONFIGURATION&#9;db_bench&#10;setupother&#9;null&#9;null&#10;pickcom&#9;null&#9;null&#10;merge&#9;FILE&#9;file:///home/lh2debug/mycode/LevelDBSNAPPY/table/merger.cc&#10;docompac&#9;null&#9;null&#10;setupoth&#9;null&#9;null&#10;maysc&#9;null&#9;null&#10;docompa&#9;null&#9;null&#10;pickcompact&#9;null&#9;null&#10;docompaction&#9;null&#9;null&#10;compactmemta&#9;null&#9;null&#10;docompact&#9;null&#9;null&#10;compactmem&#9;null&#9;null&#10;getover&#9;null&#9;null&#10;versionset&#9;FILE&#9;file:///home/lh2debug/mycode/LevelDBSNAPPY/db/version_set.cc&#10;mayschedule&#9;null&#9;null&#10;dbimpl.c&#9;FILE&#9;file:///home/lh2debug/mycode/LevelDBSNAPPY/db/db_impl.cc&#10;version&#9;FILE&#9;file:///home/lh2debug/mycode/LevelDBSNAPPY/db/version_set.h&#10;memtable&#9;FILE&#9;file:///home/lh2debug/mycode/LevelDBSNAPPY/db/memtable.h&#10;kType&#9;null&#9;null&#10;version_set&#9;FILE&#9;file:///home/lh2debug/mycode/LevelDBSNAPPY/db/version_set.h&#10;versionse&#9;FILE&#9;file:///home/lh2debug/mycode/LevelDBSNAPPY/db/version_set.cc" />
+    <property name="SearchEverywhereHistoryKey" value="filemet&#9;null&#9;null&#10;verset.c&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/version_set.cc&#10;dbim.c&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_impl.cc&#10;write&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/write_batch_internal.h&#10;dbimpl.c&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_impl.cc&#10;memtable.h&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/memtable.h&#10;version&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/version_edit.h&#10;builder.c&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/builder.cc&#10;writelevel&#9;null&#9;null&#10;makeroom&#9;null&#9;null&#10;mays&#9;null&#9;null&#10;MAYS&#9;null&#9;null&#10;status&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/include/leveldb/status.h&#10;compactmemt&#9;null&#9;null&#10;WRITE_BATCH&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/include/leveldb/write_batch.h&#10;db.h&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/include/leveldb/db.h&#10;dbimpl&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_impl.h&#10;dbbench&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_bench.cc&#10;dbbenc&#9;RUN_CONFIGURATION&#9;db_bench&#10;setupother&#9;null&#9;null&#10;pickcom&#9;null&#9;null&#10;merge&#9;FILE&#9;file:///home/lh2debug/mycode/LevelDBSNAPPY/table/merger.cc&#10;docompac&#9;null&#9;null&#10;setupoth&#9;null&#9;null&#10;maysc&#9;null&#9;null&#10;docompa&#9;null&#9;null&#10;pickcompact&#9;null&#9;null&#10;docompaction&#9;null&#9;null&#10;compactmemta&#9;null&#9;null&#10;docompact&#9;null&#9;null&#10;compactmem&#9;null&#9;null&#10;getover&#9;null&#9;null&#10;versionset&#9;FILE&#9;file:///home/lh2debug/mycode/LevelDBSNAPPY/db/version_set.cc&#10;mayschedule&#9;null&#9;null&#10;memtable&#9;FILE&#9;file:///home/lh2debug/mycode/LevelDBSNAPPY/db/memtable.h&#10;kType&#9;null&#9;null&#10;version_set&#9;FILE&#9;file:///home/lh2debug/mycode/LevelDBSNAPPY/db/version_set.h&#10;versionse&#9;FILE&#9;file:///home/lh2debug/mycode/LevelDBSNAPPY/db/version_set.cc" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++" />
   </component>
   <component name="RunDashboard">
@@ -529,12 +540,12 @@
       <updated>1499042450385</updated>
       <workItem from="1499042454434" duration="163000" />
       <workItem from="1499043795507" duration="28455000" />
-      <workItem from="1499742556033" duration="11778000" />
+      <workItem from="1499742556033" duration="21069000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40396000" />
+    <option name="totallyTimeSpent" value="49687000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="25" width="1922" height="1032" extended-state="6" />
@@ -667,34 +678,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/memtable.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="73" column="47" lean-forward="false" selection-start-line="73" selection-start-column="47" selection-end-line="73" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/memtable.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="108" column="28" lean-forward="false" selection-start-line="108" selection-start-column="28" selection-end-line="108" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/table/merger.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="55" column="26" lean-forward="false" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/version_set.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -739,30 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/write_batch.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="41" column="17" lean-forward="false" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/write_batch_internal.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/leveldb/write_batch.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="51" column="9" lean-forward="false" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/repair.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="97">
@@ -787,14 +750,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/version_edit.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="24" column="11" lean-forward="true" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/port/thread_annotations.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="107">
@@ -805,17 +760,109 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/db_impl.h">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="109" column="7" lean-forward="false" selection-start-line="109" selection-start-column="7" selection-end-line="109" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/builder.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/memtable.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding>
+            <element signature="e#296#313#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/write_batch_internal.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="41" column="101" lean-forward="false" selection-start-line="41" selection-start-column="101" selection-end-line="41" selection-end-column="101" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/bench/db_bench_tree_db.cc">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
-          <caret line="33" column="17" lean-forward="false" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+          <caret line="388" column="9" lean-forward="false" selection-start-line="388" selection-start-column="9" selection-end-line="388" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/leveldb/iterator.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="74" column="17" lean-forward="false" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/table/iterator.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="33" column="12" lean-forward="false" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/leveldb/write_batch.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="51" column="9" lean-forward="false" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/write_batch.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="154" column="0" lean-forward="false" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/table/merger.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/db_impl.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="1263" column="16" lean-forward="false" selection-start-line="1263" selection-start-column="12" selection-end-line="1263" selection-end-column="16" />
+        <state relative-caret-position="377">
+          <caret line="1699" column="3" lean-forward="false" selection-start-line="1699" selection-start-column="3" selection-end-line="1699" selection-end-column="3" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/version_set.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="641" column="49" lean-forward="true" selection-start-line="641" selection-start-column="49" selection-end-line="641" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/version_edit.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="26" column="11" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+          <folding>
+            <element signature="e#304#318#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
