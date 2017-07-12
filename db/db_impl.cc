@@ -680,6 +680,14 @@ bool DBImpl::NeedScheduleExtraTrivialMove(int level){
 
 //lhh add
 void DBImpl::DistributeDelKeysToLowerLevel() {
+    mutex_.AssertHeld();
+    if (NULL == del_imm_) return;
+    for (int i = config::kDistriStartLevel; i < config::kNumLevels-1;++i){
+      if (versions_->current())
+    }
+    //
+
+
 
 
 }

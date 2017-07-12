@@ -55,6 +55,11 @@ static const double kScoreAmplifyCoef = 2.0;
 //lhh add
 static bool kIsTooMuchDelData = false;
 
+
+//lhh add
+static const int kDistriStartLevel = 2;
+
+
 }  // namespace config
 
 class InternalKey;
