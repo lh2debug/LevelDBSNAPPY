@@ -279,6 +279,8 @@ class VersionSet {
 
   bool IsTooMuchDelData(uint64_t level_bytes, uint64_t level_del_keys_bytes);
 
+  void ComputeFileNeedUpdateUsingDelMem(MemTable* del_memtable, std::vector<*FileMetaData>& files_need_update);
+
  private:
   class Builder;
 

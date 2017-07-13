@@ -18,6 +18,9 @@
 #include "util/coding.h"
 #include "util/logging.h"
 #include <vector>
+//lhh add
+#include <map>
+
 
 namespace leveldb {
 
@@ -63,6 +66,8 @@ static int64_t TotalFileSize(const std::vector<FileMetaData*>& files) {
   }
   return sum;
 }
+
+
 
 //lhh add
 
@@ -1120,6 +1125,41 @@ Version* VersionSet::GetCurrentVersion() const {
 bool VersionSet::IsTooMuchDelData(uint64_t level_bytes, uint64_t level_del_keys_bytes){
   config::kIsTooMuchDelData = (level_del_keys_bytes > level_bytes * config::kDelDataDealTriggerPercent);
   return config::kIsTooMuchDelData;
+}
+
+//lhh add
+void VersionSet::ComputeFileNeedUpdateUsingDelMem(MemTable* del_memtable, std::vector<*FileMetaData>& files_need_update){
+  mutex_.AssertHeld();
+  files_need_update.clear();
+  std::map<FileMetaData*, vector<Slice> > files_map;
+  Iterator* iter = del_memtable->NewIterator();
+  iter->SeekToFirst();
+
+  for (; iter->Valid(); iter->Next()) {
+    Slice del_key = iter->key();
+    for (int level = config::kDistriStartLevel; level < config::kNumLevels-1; level++) {
+//        size_t num_files = files_[level].size();
+//        if (num_files == 0) continue;
+      //FileMetaData* const* files = &files_[level][0];
+      //uint32_t index = FindFile(vset_->icmp_, files_[level], ikey);
+      for (size_t i = 0; i < current_->files_[level].size(); i++) {
+        FileMetaData* f = current_->files_[level][i];
+        if (icmp_.Compare(f->smallest.Encode(), del_key) <= 0 && icmp_.Compare(f->largest.Encode(), del_key) >= 0){
+          //files_need_update.push_back(f);
+          files_map[f].push_back(del_key);
+        }
+      }
+    }
+  }
+
+  for (auto iter = files_map.begin();iter != files_map.end();++iter){
+    FileMetaData* f = iter->first;
+    vector<Slice>& keys = iter->second;
+     
+  }
+
+
+
 }
 
 void VersionSet::Finalize(Version* v) {

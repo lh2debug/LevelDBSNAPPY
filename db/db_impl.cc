@@ -685,8 +685,8 @@ bool DBImpl::NeedScheduleExtraTrivialMove(int level){
 void DBImpl::DistributeDelKeysToLowerLevel() {
     mutex_.AssertHeld();
     if (NULL == del_imm_) return;
-    //vector<>
-    //versions_->ComputeFileNeedUpdateUsingDelMem(Memtable* del_imm_, );
+    vector<FileMetaData*> files_need_update;
+    versions_->ComputeFileNeedUpdateUsingDelMem(Memtable* del_imm_, files_need_update);
 
 
 
