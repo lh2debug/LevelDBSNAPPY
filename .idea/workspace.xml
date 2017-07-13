@@ -37,7 +37,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dab0620e-b061-42a5-80d6-16265cbf45c3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/db_bench.cc" afterPath="$PROJECT_DIR$/db/db_bench.cc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/db_impl.cc" afterPath="$PROJECT_DIR$/db/db_impl.cc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/dbformat.h" afterPath="$PROJECT_DIR$/db/dbformat.h" />
     </list>
@@ -52,75 +52,24 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="version_edit.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/version_edit.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="77" column="13" lean-forward="false" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
-              <folding>
-                <element signature="e#304#318#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="memtable.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/memtable.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="39" column="31" lean-forward="false" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="31" />
-              <folding>
-                <element signature="e#296#313#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="memtable.cc" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/memtable.cc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="31" column="69" lean-forward="false" selection-start-line="31" selection-start-column="58" selection-end-line="31" selection-end-column="69" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="arena.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/util/arena.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="24" column="38" lean-forward="false" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="db_impl.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/db_impl.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="118" column="35" lean-forward="false" selection-start-line="118" selection-start-column="9" selection-end-line="118" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="atomic_pointer.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/port/atomic_pointer.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="131" column="46" lean-forward="false" selection-start-line="131" selection-start-column="40" selection-end-line="131" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="db_impl.cc" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/db_impl.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="1087" column="3" lean-forward="true" selection-start-line="1087" selection-start-column="3" selection-end-line="1087" selection-end-column="3" />
+            <state relative-caret-position="286">
+              <caret line="688" column="6" lean-forward="false" selection-start-line="688" selection-start-column="6" selection-end-line="688" selection-end-column="6" />
+              <folding>
+                <element signature="e#217#240#0" expanded="true" />
+                <element signature="e#963#985#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bloom.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/util/bloom.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="30" column="27" lean-forward="false" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -129,8 +78,8 @@
       <file leaf-file-name="version_set.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/version_set.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="234" column="14" lean-forward="true" selection-start-line="234" selection-start-column="14" selection-end-line="234" selection-end-column="29" />
+            <state relative-caret-position="376">
+              <caret line="72" column="13" lean-forward="false" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -139,8 +88,8 @@
       <file leaf-file-name="dbformat.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/dbformat.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="59" column="39" lean-forward="false" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
+            <state relative-caret-position="286">
+              <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -149,8 +98,58 @@
       <file leaf-file-name="version_set.cc" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/version_set.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-380">
-              <caret line="1387" column="38" lean-forward="false" selection-start-line="1387" selection-start-column="24" selection-end-line="1387" selection-end-column="38" />
+            <state relative-caret-position="286">
+              <caret line="455" column="34" lean-forward="false" selection-start-line="455" selection-start-column="31" selection-end-line="455" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="table_cache.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/table_cache.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="52" column="15" lean-forward="false" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="table_cache.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/table_cache.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="52" column="21" lean-forward="false" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db_bench_tree_db.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/doc/bench/db_bench_tree_db.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="606">
+              <caret line="388" column="9" lean-forward="false" selection-start-line="388" selection-start-column="9" selection-end-line="388" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db_bench.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/db_bench.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="139" column="31" lean-forward="false" selection-start-line="139" selection-start-column="31" selection-end-line="139" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.h" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/include/valgrind/config.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-7836">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -160,36 +159,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>finali</find>
-      <find>finaliz</find>
-      <find>finalize</find>
-      <find>\</find>
-      <find>PickCompaction(</find>
-      <find>PickCompaction</find>
-      <find>d</find>
-      <find>doc</find>
-      <find>docom</find>
-      <find>docomp</find>
-      <find>docompa</find>
-      <find>docompac</find>
-      <find>docompactgi</find>
-      <find>docompactg</find>
-      <find>docompact</find>
-      <find>FinishCompactionOutputFile(</find>
-      <find>FinishCompactionOutputFile</find>
-      <find>l</find>
-      <find>log</find>
-      <find>logaND</find>
-      <find>logaN</find>
-      <find>loga</find>
-      <find>logand</find>
-      <find>loganda</find>
-      <find>logandap</find>
-      <find>logandapp</find>
-      <find>logandappl</find>
-      <find>logandapply</find>
-      <find>LogAndApply</find>
-      <find>InstallCompactionResults</find>
+      <find>namex</find>
+      <find>name</find>
+      <find>namesp</find>
+      <find>namespac</find>
+      <find>namespace</find>
+      <find>namespace</find>
+      <find>namespace con</find>
+      <find>namespace confi</find>
+      <find>c</find>
+      <find>conf</find>
+      <find>config</find>
+      <find>nconfig</find>
+      <find>naconfig</find>
+      <find>nampconfig</find>
+      <find>namconfig</find>
+      <find>nameconfig</find>
+      <find>namesconfig</find>
+      <find>namespaconfig</find>
+      <find>namespacconfig</find>
+      <find>namespaceconfig</find>
+      <find>bloom</find>
+      <find>namespace config</find>
+      <find>di</find>
+      <find>dis</find>
+      <find>dist</find>
+      <find>distr</find>
+      <find>distri</find>
+      <find>distribu</find>
+      <find>distribut</find>
+      <find>distribute</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -206,8 +205,10 @@
         <option value="$PROJECT_DIR$/table/merger.cc" />
         <option value="$PROJECT_DIR$/db/version_edit.h" />
         <option value="$PROJECT_DIR$/db/memtable.h" />
-        <option value="$PROJECT_DIR$/db/dbformat.h" />
         <option value="$PROJECT_DIR$/db/version_set.cc" />
+        <option value="$PROJECT_DIR$/db/dbformat.h" />
+        <option value="$PROJECT_DIR$/doc/bench/db_bench_tree_db.cc" />
+        <option value="$PROJECT_DIR$/db/db_bench.cc" />
         <option value="$PROJECT_DIR$/db/db_impl.cc" />
       </list>
     </option>
@@ -237,7 +238,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="version&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/version_set.h&#10;PICKCOMPACT&#9;null&#9;null&#10;maybesch&#9;null&#9;null&#10;writelevel0&#9;null&#9;null&#10;writelevel&#9;null&#9;null&#10;MEMTABLE\&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/memtable.h&#10;memtable&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/memtable.h&#10;filemet&#9;null&#9;null&#10;verset.c&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/version_set.cc&#10;dbim.c&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_impl.cc&#10;write&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/write_batch_internal.h&#10;dbimpl.c&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_impl.cc&#10;memtable.h&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/memtable.h&#10;builder.c&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/builder.cc&#10;makeroom&#9;null&#9;null&#10;mays&#9;null&#9;null&#10;MAYS&#9;null&#9;null&#10;status&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/include/leveldb/status.h&#10;compactmemt&#9;null&#9;null&#10;WRITE_BATCH&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/include/leveldb/write_batch.h&#10;db.h&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/include/leveldb/db.h&#10;dbimpl&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_impl.h&#10;dbbench&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_bench.cc&#10;dbbenc&#9;RUN_CONFIGURATION&#9;db_bench&#10;setupother&#9;null&#9;null&#10;pickcom&#9;null&#9;null&#10;merge&#9;FILE&#9;file:///home/lh2debug/mycode/LevelDBSNAPPY/table/merger.cc&#10;docompac&#9;null&#9;null&#10;setupoth&#9;null&#9;null&#10;maysc&#9;null&#9;null&#10;docompa&#9;null&#9;null&#10;pickcompact&#9;null&#9;null&#10;docompaction&#9;null&#9;null&#10;compactmemta&#9;null&#9;null&#10;docompact&#9;null&#9;null&#10;compactmem&#9;null&#9;null&#10;getover&#9;null&#9;null&#10;versionset&#9;FILE&#9;file:///home/lh2debug/mycode/LevelDBSNAPPY/db/version_set.cc&#10;mayschedule&#9;null&#9;null&#10;kType&#9;null&#9;null&#10;version_set&#9;FILE&#9;file:///home/lh2debug/mycode/LevelDBSNAPPY/db/version_set.h&#10;versionse&#9;FILE&#9;file:///home/lh2debug/mycode/LevelDBSNAPPY/db/version_set.cc" />
+    <property name="SearchEverywhereHistoryKey" value="dbenc.c&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_bench.cc&#10;dbenc&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_bench.cc&#10;dben&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/doc/bench/db_bench_tree_db.cc&#10;dbimp.c&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_impl.cc&#10;config&#9;FILE&#9;file:///usr/include/valgrind/config.h&#10;ver.h&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/version_set.h&#10;verse&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/version_set.cc&#10;dbimp.cc&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_impl.cc&#10;bloom.c&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/util/bloom.cc&#10;version&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/version_set.h&#10;PICKCOMPACT&#9;null&#9;null&#10;maybesch&#9;null&#9;null&#10;writelevel0&#9;null&#9;null&#10;writelevel&#9;null&#9;null&#10;MEMTABLE\&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/memtable.h&#10;memtable&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/memtable.h&#10;filemet&#9;null&#9;null&#10;verset.c&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/version_set.cc&#10;dbim.c&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_impl.cc&#10;write&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/write_batch_internal.h&#10;dbimpl.c&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_impl.cc&#10;memtable.h&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/memtable.h&#10;builder.c&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/builder.cc&#10;makeroom&#9;null&#9;null&#10;mays&#9;null&#9;null&#10;MAYS&#9;null&#9;null&#10;status&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/include/leveldb/status.h&#10;compactmemt&#9;null&#9;null&#10;WRITE_BATCH&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/include/leveldb/write_batch.h&#10;db.h&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/include/leveldb/db.h&#10;dbimpl&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_impl.h&#10;dbbench&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_bench.cc&#10;dbbenc&#9;RUN_CONFIGURATION&#9;db_bench&#10;setupother&#9;null&#9;null&#10;pickcom&#9;null&#9;null&#10;merge&#9;FILE&#9;file:///home/lh2debug/mycode/LevelDBSNAPPY/table/merger.cc&#10;docompac&#9;null&#9;null&#10;setupoth&#9;null&#9;null&#10;maysc&#9;null&#9;null&#10;docompa&#9;null&#9;null&#10;pickcompact&#9;null&#9;null&#10;docompaction&#9;null&#9;null&#10;compactmemta&#9;null&#9;null&#10;docompact&#9;null&#9;null&#10;compactmem&#9;null&#9;null&#10;getover&#9;null&#9;null&#10;versionset&#9;FILE&#9;file:///home/lh2debug/mycode/LevelDBSNAPPY/db/version_set.cc&#10;mayschedule&#9;null&#9;null&#10;kType&#9;null&#9;null&#10;version_set&#9;FILE&#9;file:///home/lh2debug/mycode/LevelDBSNAPPY/db/version_set.h" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++" />
   </component>
   <component name="RunDashboard">
@@ -537,12 +538,12 @@
       <workItem from="1499042454434" duration="163000" />
       <workItem from="1499043795507" duration="28455000" />
       <workItem from="1499742556033" duration="21552000" />
-      <workItem from="1499854902494" duration="5573000" />
+      <workItem from="1499854902494" duration="9672000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55743000" />
+    <option name="totallyTimeSpent" value="59842000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="25" width="1922" height="1032" extended-state="6" />
@@ -584,7 +585,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#304#318#0" expanded="true" />
+            <element signature="e#304#318#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -593,7 +594,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30582">
           <caret line="1699" column="3" lean-forward="false" selection-start-line="1699" selection-start-column="3" selection-end-line="1699" selection-end-column="3" />
-          <folding />
+          <folding>
+            <element signature="e#217#240#0" expanded="true" />
+            <element signature="e#963#985#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -673,7 +677,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17280">
           <caret line="960" column="48" lean-forward="false" selection-start-line="960" selection-start-column="31" selection-end-line="960" selection-end-column="48" />
-          <folding />
+          <folding>
+            <element signature="e#217#240#0" expanded="true" />
+            <element signature="e#963#985#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -690,7 +697,7 @@
         <state relative-caret-position="1548">
           <caret line="86" column="14" lean-forward="false" selection-start-line="86" selection-start-column="14" selection-end-line="86" selection-end-column="14" />
           <folding>
-            <element signature="e#304#318#0" expanded="true" />
+            <element signature="e#304#318#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -716,7 +723,7 @@
         <state relative-caret-position="1314">
           <caret line="73" column="47" lean-forward="false" selection-start-line="73" selection-start-column="47" selection-end-line="73" selection-end-column="47" />
           <folding>
-            <element signature="e#296#313#0" expanded="true" />
+            <element signature="e#296#313#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -749,14 +756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/db_bench.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="119" column="11" lean-forward="false" selection-start-line="119" selection-start-column="11" selection-end-line="119" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -797,6 +796,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="97">
           <caret line="161" column="26" lean-forward="false" selection-start-line="161" selection-start-column="9" selection-end-line="161" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -827,14 +827,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="738">
           <caret line="41" column="101" lean-forward="false" selection-start-line="41" selection-start-column="101" selection-end-line="41" selection-end-column="101" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doc/bench/db_bench_tree_db.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6984">
-          <caret line="388" column="9" lean-forward="false" selection-start-line="388" selection-start-column="9" selection-end-line="388" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -884,7 +876,7 @@
         <state relative-caret-position="462">
           <caret line="77" column="13" lean-forward="false" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
           <folding>
-            <element signature="e#304#318#0" expanded="true" />
+            <element signature="e#304#318#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -894,7 +886,7 @@
         <state relative-caret-position="378">
           <caret line="39" column="31" lean-forward="false" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="31" />
           <folding>
-            <element signature="e#296#313#0" expanded="true" />
+            <element signature="e#296#313#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -915,34 +907,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/dbformat.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="59" column="39" lean-forward="false" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/port/atomic_pointer.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
           <caret line="131" column="46" lean-forward="false" selection-start-line="131" selection-start-column="40" selection-end-line="131" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/version_set.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="234" column="14" lean-forward="true" selection-start-line="234" selection-start-column="14" selection-end-line="234" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/version_set.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-380">
-          <caret line="1387" column="38" lean-forward="false" selection-start-line="1387" selection-start-column="24" selection-end-line="1387" selection-end-column="38" />
           <folding />
         </state>
       </provider>
@@ -955,11 +923,86 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/util/bloom.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="30" column="27" lean-forward="false" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/version_set.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="72" column="13" lean-forward="false" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/version_set.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="455" column="34" lean-forward="false" selection-start-line="455" selection-start-column="31" selection-end-line="455" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/table_cache.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="52" column="15" lean-forward="false" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/table_cache.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="52" column="21" lean-forward="false" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/valgrind/config.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7836">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/dbformat.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/bench/db_bench_tree_db.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="388" column="9" lean-forward="false" selection-start-line="388" selection-start-column="9" selection-end-line="388" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/db_bench.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="139" column="31" lean-forward="false" selection-start-line="139" selection-start-column="31" selection-end-line="139" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/db/db_impl.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="1087" column="3" lean-forward="true" selection-start-line="1087" selection-start-column="3" selection-end-line="1087" selection-end-column="3" />
-          <folding />
+        <state relative-caret-position="286">
+          <caret line="688" column="6" lean-forward="false" selection-start-line="688" selection-start-column="6" selection-end-line="688" selection-end-column="6" />
+          <folding>
+            <element signature="e#217#240#0" expanded="true" />
+            <element signature="e#963#985#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

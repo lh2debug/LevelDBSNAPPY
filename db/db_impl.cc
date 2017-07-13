@@ -36,6 +36,7 @@
 #include "db/dbstat.h"
 #include <iostream>
 #include <sstream>
+#include <cassert>
 
 namespace leveldb {
 
@@ -147,6 +148,8 @@ DBImpl::DBImpl(const Options& raw_options, const std::string& dbname)
       tmp_batch_(new WriteBatch),
       bg_compaction_scheduled_(false),
       manual_compaction_(NULL) {
+  //lhh add
+  assert(config::kRunBloomFilter ? (NULL != raw_options.filter_policy) : true);
   has_imm_.Release_Store(NULL);
 
   // Reserve ten files or so for other uses and give the rest to TableCache.
@@ -682,10 +685,8 @@ bool DBImpl::NeedScheduleExtraTrivialMove(int level){
 void DBImpl::DistributeDelKeysToLowerLevel() {
     mutex_.AssertHeld();
     if (NULL == del_imm_) return;
-    for (int i = config::kDistriStartLevel; i < config::kNumLevels-1;++i){
-      if (versions_->current())
-    }
-    //
+    //vector<>
+    //versions_->ComputeFileNeedUpdateUsingDelMem(Memtable* del_imm_, );
 
 
 

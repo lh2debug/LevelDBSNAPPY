@@ -59,6 +59,9 @@ static bool kIsTooMuchDelData = false;
 //lhh add
 static const int kDistriStartLevel = 2;
 
+//lhh add
+static const bool kRunBloomFilter = true;
+
 
 }  // namespace config
 
