@@ -1149,7 +1149,6 @@ void VersionSet::DistributeDelKeysToTables(const Options &options, MemTable* del
     FileMetaData* f = iter->first;
     std::vector<Slice>& keys = iter->second;
     table_cache_->DistributeDelKeys(options, f, keys);
-    //lhh to do release mutex
   }
   if (NULL != del_memtable) del_memtable->Unref();
   del_memtable = NULL;

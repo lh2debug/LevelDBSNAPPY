@@ -9,6 +9,7 @@
 #include "leveldb/iterator.h"
 //lhh add
 #include <vector>
+#include "db/version_edit.h"
 
 namespace leveldb {
 

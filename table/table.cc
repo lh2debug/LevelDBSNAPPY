@@ -102,10 +102,12 @@ Status Table::InternalDistributeDelKeys(const Options& options, FileMetaData* me
         Slice handle_value = iiter->value();
         if (handle.DecodeFrom(&handle_value).ok() &&
             filter->KeyMayMatch(handle.offset(), k)) {
-          meta->del_buf->Add()
+          ParsedInternalKey pikey;
+          ParseInternalKey(k, &pikey);
+          assert(kTypeDeletion == pikey.type);
+          meta->del_buf->Add(pikey.sequence, pikey.type, pikey.user_key,Slice());
         }
       }
-
     }
     delete iiter;
     return s;
