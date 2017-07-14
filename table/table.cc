@@ -2,6 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file. See the AUTHORS file for names of contributors.
 
+#include <db/version_edit.h>
 #include "leveldb/table.h"
 
 #include "leveldb/cache.h"
@@ -89,9 +90,25 @@ Status Table::Open(const Options& options,
 }
 
 //lhh add
-void InternalDistributeDelKeys(const Options& options, FileMetaData* meta, vector<Slice>& keys) {
+Status Table::InternalDistributeDelKeys(const Options& options, FileMetaData* meta, std::vector<Slice>& keys) {
+    Status s;
+    Iterator* iiter = rep_->index_block->NewIterator(rep_->options.comparator);
+    assert(NULL != rep_->filter);
+    FilterBlockReader* filter = rep_->filter;
+    BlockHandle handle;
+    for (auto k : keys){
+      iiter->Seek(k);
+      if (iiter->Valid()){
+        Slice handle_value = iiter->value();
+        if (handle.DecodeFrom(&handle_value).ok() &&
+            filter->KeyMayMatch(handle.offset(), k)) {
+          meta->del_buf->Add()
+        }
+      }
 
-
+    }
+    delete iiter;
+    return s;
 }
 
 void Table::ReadMeta(const Footer& footer) {

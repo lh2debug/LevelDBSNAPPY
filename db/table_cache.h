@@ -13,6 +13,7 @@
 #include "leveldb/cache.h"
 #include "leveldb/table.h"
 #include "port/port.h"
+#include "version_edit.h"
 
 namespace leveldb {
 
@@ -47,7 +48,12 @@ class TableCache {
   // Evict any entry for the specified file number
   void Evict(uint64_t file_number);
 
+  //lhh add
+  Status DistributeDelKeys(const Options& options, FileMetaData* f, std::vector<Slice>& keys);
+
  private:
+
+
   Env* const env_;
   const std::string dbname_;
   const Options* options_;

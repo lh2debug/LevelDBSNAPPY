@@ -58,7 +58,7 @@ class Table {
   uint64_t ApproximateOffsetOf(const Slice& key) const;
 
   //lhh add
-  void InternalDistributeDelKeys(const Options& options, FileMetaData* meta, std::vector<Slice>& keys);
+  Status InternalDistributeDelKeys(const Options& options, FileMetaData* meta, std::vector<Slice>& keys);
 
  private:
   struct Rep;

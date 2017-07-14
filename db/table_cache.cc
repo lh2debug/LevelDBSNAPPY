@@ -79,6 +79,18 @@ Status TableCache::FindTable(uint64_t file_number, uint64_t file_size,
   return s;
 }
 
+//lhh add
+Status TableCache::DistributeDelKeys(const Options& options, FileMetaData* f, std::vector<Slice>& keys){
+    Cache::Handle* handle = NULL;
+    Status s = FindTable(f->number, f->file_size, &handle);
+    if (s.ok()){
+      Table* t = reinterpret_cast<TableAndFile*>(cache_->Value(handle))->table;
+      t->InternalDistributeDelKeys(options, f, keys);
+      cache_->Release(handle);
+    }
+    return s;
+}
+
 Iterator* TableCache::NewIterator(const ReadOptions& options,
                                   uint64_t file_number,
                                   uint64_t file_size,

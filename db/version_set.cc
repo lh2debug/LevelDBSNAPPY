@@ -1148,14 +1148,10 @@ void VersionSet::DistributeDelKeysToTables(const Options &options, MemTable* del
   for (auto iter = files_map.begin();iter != files_map.end();++iter){
     FileMetaData* f = iter->first;
     std::vector<Slice>& keys = iter->second;
-    Cache::Handle* handle = NULL;
-    Status s = FindTable(f->number, f->file_size, &handle);
-    if (s.ok()){
-      Table* t = reinterpret_cast<TableAndFile*>(cache_->Value(handle))->table;
-      t->InternalDistributeDelKeys(options, f, keys);
-    }
+    table_cache_->DistributeDelKeys(options, f, keys);
+    //lhh to do release mutex
   }
-  del_memtable->Unref();
+  if (NULL != del_memtable) del_memtable->Unref();
   del_memtable = NULL;
 }
 
