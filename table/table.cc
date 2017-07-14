@@ -105,6 +105,10 @@ Status Table::InternalDistributeDelKeys(const Options& options, FileMetaData* me
           ParsedInternalKey pikey;
           ParseInternalKey(k, &pikey);
           assert(kTypeDeletion == pikey.type);
+          if (NULL == meta->del_buf){
+            meta->del_buf = new MemTable((InternalKeyComparator(options.comparator)));
+            meta->del_buf->Ref();
+          }
           meta->del_buf->Add(pikey.sequence, pikey.type, pikey.user_key,Slice());
         }
       }
