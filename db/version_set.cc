@@ -1195,7 +1195,7 @@ void VersionSet::Finalize(Version* v) {
       del_keys_bytes[level] = level_del_keys_bytes;
       files_bytes[level] = level_bytes;
       score =
-              static_cast<double>(level_bytes + level_del_keys_bytes * config::kDelKeyScoreWeightCoef)  / MaxBytesForLevel(options_, level);
+              static_cast<double>(level_bytes  /* + level_del_keys_bytes * config::kDelKeyScoreWeightCoef*/)  / MaxBytesForLevel(options_, level);
     }
 
     if (score > best_score) {

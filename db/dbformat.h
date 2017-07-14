@@ -47,7 +47,7 @@ static const double kDelDataDealTriggerPercent = 0.21;
 
 
 //lhh add
-static const double kDelKeyScoreWeightCoef = 10.0;
+//static const double kDelKeyScoreWeightCoef = 10.0;
 
 //lhh add
 static const double kScoreAmplifyCoef = 2.0;

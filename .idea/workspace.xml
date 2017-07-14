@@ -29,7 +29,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dab0620e-b061-42a5-80d6-16265cbf45c3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/table/table.cc" afterPath="$PROJECT_DIR$/table/table.cc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/dbformat.h" afterPath="$PROJECT_DIR$/db/dbformat.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/version_set.cc" afterPath="$PROJECT_DIR$/db/version_set.cc" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,8 +58,8 @@
           <file leaf-file-name="version_set.cc" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/db/version_set.cc">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="250">
-                  <caret line="1117" column="1" lean-forward="false" selection-start-line="1117" selection-start-column="1" selection-end-line="1117" selection-end-column="1" />
+                <state relative-caret-position="322">
+                  <caret line="1208" column="43" lean-forward="false" selection-start-line="1208" selection-start-column="26" selection-end-line="1208" selection-end-column="43" />
                   <folding>
                     <element signature="e#217#244#0" expanded="true" />
                   </folding>
@@ -66,11 +67,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="dbformat.h" pinned="false" current-in-tab="false">
+          <file leaf-file-name="dbformat.h" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/db/dbformat.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="214">
-                  <caret line="197" column="12" lean-forward="false" selection-start-line="197" selection-start-column="12" selection-end-line="197" selection-end-column="12" />
+                <state relative-caret-position="306">
+                  <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -79,8 +80,8 @@
           <file leaf-file-name="version_set.h" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/db/version_set.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="52">
-                  <caret line="33" column="16" lean-forward="false" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="16" />
+                <state relative-caret-position="340">
+                  <caret line="409" column="70" lean-forward="true" selection-start-line="409" selection-start-column="70" selection-end-line="409" selection-end-column="70" />
                   <folding />
                 </state>
               </provider>
@@ -121,11 +122,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="table.cc" pinned="false" current-in-tab="true">
+          <file leaf-file-name="table.cc" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/table/table.cc">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="196">
-                  <caret line="109" column="33" lean-forward="false" selection-start-line="109" selection-start-column="33" selection-end-line="109" selection-end-column="33" />
+                <state relative-caret-position="358">
+                  <caret line="118" column="0" lean-forward="true" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
                   <folding>
                     <element signature="e#217#245#0" expanded="true" />
                   </folding>
@@ -146,8 +147,8 @@
           <file leaf-file-name="db_impl.cc" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/db/db_impl.cc">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="376">
-                  <caret line="524" column="40" lean-forward="false" selection-start-line="524" selection-start-column="32" selection-end-line="524" selection-end-column="40" />
+                <state relative-caret-position="538">
+                  <caret line="757" column="33" lean-forward="false" selection-start-line="757" selection-start-column="19" selection-end-line="757" selection-end-column="33" />
                   <folding>
                     <element signature="e#217#240#0" expanded="true" />
                     <element signature="e#963#985#0" expanded="true" />
@@ -175,8 +176,8 @@
           <file leaf-file-name="table_test.cc" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/table/table_test.cc">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="522">
-                  <caret line="336" column="5" lean-forward="false" selection-start-line="336" selection-start-column="5" selection-end-line="336" selection-end-column="5" />
+                <state relative-caret-position="378">
+                  <caret line="331" column="14" lean-forward="false" selection-start-line="331" selection-start-column="9" selection-end-line="331" selection-end-column="14" />
                   <folding />
                 </state>
               </provider>
@@ -218,36 +219,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>d</find>
-      <find>dis</find>
-      <find>dist</find>
-      <find>distri</find>
-      <find>distribu</find>
-      <find>distribut</find>
-      <find>distribute</find>
-      <find>distributek</find>
-      <find>distributed</find>
-      <find>distributedel</find>
-      <find>distributedelke</find>
-      <find>distributedelkeyf</find>
-      <find>distributedelkeyd</find>
-      <find>distributedelkey</find>
-      <find>distributedelkeys</find>
-      <find>distributedelkeysto</find>
-      <find>distributedelkeystol</find>
-      <find>distributedelkeystolo</find>
-      <find>DistributeDelKeysToLowerLevel</find>
-      <find>AssertHeld</find>
-      <find>l</find>
-      <find>lh</find>
-      <find>lhh</find>
-      <find>lhh</find>
-      <find>lhh t</find>
-      <find>lhh to</find>
-      <find>lhh to</find>
-      <find>lhh to do</find>
-      <find>FileMetaData</find>
-      <find>filemeta</find>
+      <find>maybes</find>
+      <find>maybesch</find>
+      <find>maybesche</find>
+      <find>maybesched</find>
+      <find>maybeschedu</find>
+      <find>maybeschedul</find>
+      <find>maybeschedule</find>
+      <find>n</find>
+      <find>nsam</find>
+      <find>nsa</find>
+      <find>ns</find>
+      <find>nam</find>
+      <find>names</find>
+      <find>namespa</find>
+      <find>namespace</find>
+      <find>kIsTooMuchDelData</find>
+      <find>IsTooMuchDelData</find>
+      <find>del_keys_bytes</find>
+      <find>na</find>
+      <find>name</find>
+      <find>namespac</find>
+      <find>namespace</find>
+      <find>namespace con</find>
+      <find>namespace conf</find>
+      <find>namespace confiog</find>
+      <find>namespace confio</find>
+      <find>namespace confi</find>
+      <find>namespace config</find>
+      <find>kDelKeyScoreWeightCoef</find>
+      <find>kScoreAmplifyCoef</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -262,17 +263,17 @@
         <option value="$PROJECT_DIR$/table/merger.cc" />
         <option value="$PROJECT_DIR$/db/version_edit.h" />
         <option value="$PROJECT_DIR$/db/memtable.h" />
-        <option value="$PROJECT_DIR$/db/dbformat.h" />
         <option value="$PROJECT_DIR$/doc/bench/db_bench_tree_db.cc" />
         <option value="$PROJECT_DIR$/db/db_bench.cc" />
         <option value="$PROJECT_DIR$/db/version_set.h" />
         <option value="$PROJECT_DIR$/db/db_impl.h" />
         <option value="$PROJECT_DIR$/db/db_impl.cc" />
         <option value="$PROJECT_DIR$/db/table_cache.cc" />
-        <option value="$PROJECT_DIR$/db/version_set.cc" />
         <option value="$PROJECT_DIR$/db/table_cache.h" />
         <option value="$PROJECT_DIR$/include/leveldb/table.h" />
         <option value="$PROJECT_DIR$/table/table.cc" />
+        <option value="$PROJECT_DIR$/db/version_set.cc" />
+        <option value="$PROJECT_DIR$/db/dbformat.h" />
       </list>
     </option>
   </component>
@@ -561,12 +562,12 @@
       <workItem from="1499042454434" duration="163000" />
       <workItem from="1499043795507" duration="28455000" />
       <workItem from="1499742556033" duration="21552000" />
-      <workItem from="1499854902494" duration="31545000" />
+      <workItem from="1499854902494" duration="34968000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81715000" />
+    <option name="totallyTimeSpent" value="85138000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="25" width="1922" height="1032" extended-state="6" />
@@ -934,30 +935,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/table/table_test.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="336" column="5" lean-forward="false" selection-start-line="336" selection-start-column="5" selection-end-line="336" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/dbformat.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="197" column="12" lean-forward="false" selection-start-line="197" selection-start-column="12" selection-end-line="197" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/version_set.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="33" column="16" lean-forward="false" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/leveldb/table.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -987,32 +964,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/version_set.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="1117" column="1" lean-forward="false" selection-start-line="1117" selection-start-column="1" selection-end-line="1117" selection-end-column="1" />
-          <folding>
-            <element signature="e#217#244#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/db_impl.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
           <caret line="130" column="24" lean-forward="false" selection-start-line="130" selection-start-column="16" selection-end-line="130" selection-end-column="24" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/db_impl.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="524" column="40" lean-forward="false" selection-start-line="524" selection-start-column="32" selection-end-line="524" selection-end-column="40" />
-          <folding>
-            <element signature="e#217#240#0" expanded="true" />
-            <element signature="e#963#985#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1026,11 +982,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/table/table.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="109" column="33" lean-forward="false" selection-start-line="109" selection-start-column="33" selection-end-line="109" selection-end-column="33" />
+        <state relative-caret-position="358">
+          <caret line="118" column="0" lean-forward="true" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
           <folding>
             <element signature="e#217#245#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/table/table_test.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="331" column="14" lean-forward="false" selection-start-line="331" selection-start-column="9" selection-end-line="331" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/db_impl.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="757" column="33" lean-forward="false" selection-start-line="757" selection-start-column="19" selection-end-line="757" selection-end-column="33" />
+          <folding>
+            <element signature="e#217#240#0" expanded="true" />
+            <element signature="e#963#985#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/version_set.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="409" column="70" lean-forward="true" selection-start-line="409" selection-start-column="70" selection-end-line="409" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/version_set.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="1208" column="43" lean-forward="false" selection-start-line="1208" selection-start-column="26" selection-end-line="1208" selection-end-column="43" />
+          <folding>
+            <element signature="e#217#244#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/dbformat.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
