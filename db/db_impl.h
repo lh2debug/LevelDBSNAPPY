@@ -121,7 +121,7 @@ class DBImpl : public DB {
       EXCLUSIVE_LOCKS_REQUIRED(mutex_);
 
   //lhh add
-  void DistributeDelKeysToLowerLevel()
+  void DistributeDelKeysToLowerLevel(const Options& options)
       EXCLUSIVE_LOCKS_REQUIRED(mutex_);
 
   // Constant after construction

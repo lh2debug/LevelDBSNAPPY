@@ -91,7 +91,7 @@ crc32c_test_EXTERNAL_OBJECTS =
 crc32c_test: CMakeFiles/crc32c_test.dir/util/crc32c_test.cc.o
 crc32c_test: CMakeFiles/crc32c_test.dir/build.make
 crc32c_test: libleveldb-testharness.a
-crc32c_test: libleveldb_static.a
+crc32c_test: libleveldb.a
 crc32c_test: CMakeFiles/crc32c_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable crc32c_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/crc32c_test.dir/link.txt --verbose=$(VERBOSE)

@@ -1,1 +1,1 @@
-/usr/bin/c++   -g   CMakeFiles/dbformat_test.dir/db/dbformat_test.cc.o  -o dbformat_test -rdynamic libleveldb-testharness.a libleveldb_static.a -lpthread 
+/usr/bin/c++   -g   CMakeFiles/dbformat_test.dir/db/dbformat_test.cc.o  -o dbformat_test -rdynamic libleveldb-testharness.a libleveldb.a 

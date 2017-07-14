@@ -91,7 +91,7 @@ corruption_test_EXTERNAL_OBJECTS =
 corruption_test: CMakeFiles/corruption_test.dir/db/corruption_test.cc.o
 corruption_test: CMakeFiles/corruption_test.dir/build.make
 corruption_test: libleveldb-testharness.a
-corruption_test: libleveldb_static.a
+corruption_test: libleveldb.a
 corruption_test: CMakeFiles/corruption_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable corruption_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/corruption_test.dir/link.txt --verbose=$(VERBOSE)

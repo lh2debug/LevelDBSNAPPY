@@ -1,1 +1,1 @@
-/usr/bin/c++   -g   CMakeFiles/crc32c_test.dir/util/crc32c_test.cc.o  -o crc32c_test -rdynamic libleveldb-testharness.a libleveldb_static.a -lpthread 
+/usr/bin/c++   -g   CMakeFiles/crc32c_test.dir/util/crc32c_test.cc.o  -o crc32c_test -rdynamic libleveldb-testharness.a libleveldb.a 

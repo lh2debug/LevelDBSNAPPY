@@ -88,6 +88,12 @@ Status Table::Open(const Options& options,
   return s;
 }
 
+//lhh add
+void InternalDistributeDelKeys(const Options& options, FileMetaData* meta, vector<Slice>& keys) {
+
+
+}
+
 void Table::ReadMeta(const Footer& footer) {
   if (rep_->options.filter_policy == NULL) {
     return;  // Do not need any metadata

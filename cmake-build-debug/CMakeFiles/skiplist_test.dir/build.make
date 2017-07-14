@@ -91,7 +91,7 @@ skiplist_test_EXTERNAL_OBJECTS =
 skiplist_test: CMakeFiles/skiplist_test.dir/db/skiplist_test.cc.o
 skiplist_test: CMakeFiles/skiplist_test.dir/build.make
 skiplist_test: libleveldb-testharness.a
-skiplist_test: libleveldb_static.a
+skiplist_test: libleveldb.a
 skiplist_test: CMakeFiles/skiplist_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable skiplist_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/skiplist_test.dir/link.txt --verbose=$(VERBOSE)

@@ -91,7 +91,7 @@ write_batch_test_EXTERNAL_OBJECTS =
 write_batch_test: CMakeFiles/write_batch_test.dir/db/write_batch_test.cc.o
 write_batch_test: CMakeFiles/write_batch_test.dir/build.make
 write_batch_test: libleveldb-testharness.a
-write_batch_test: libleveldb_static.a
+write_batch_test: libleveldb.a
 write_batch_test: CMakeFiles/write_batch_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable write_batch_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/write_batch_test.dir/link.txt --verbose=$(VERBOSE)

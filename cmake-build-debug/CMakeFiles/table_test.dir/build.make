@@ -91,7 +91,7 @@ table_test_EXTERNAL_OBJECTS =
 table_test: CMakeFiles/table_test.dir/table/table_test.cc.o
 table_test: CMakeFiles/table_test.dir/build.make
 table_test: libleveldb-testharness.a
-table_test: libleveldb_static.a
+table_test: libleveldb.a
 table_test: CMakeFiles/table_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable table_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/table_test.dir/link.txt --verbose=$(VERBOSE)

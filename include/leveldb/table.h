@@ -7,6 +7,8 @@
 
 #include <stdint.h>
 #include "leveldb/iterator.h"
+//lhh add
+#include <vector>
 
 namespace leveldb {
 
@@ -54,6 +56,9 @@ class Table {
   // E.g., the approximate offset of the last key in the table will
   // be close to the file length.
   uint64_t ApproximateOffsetOf(const Slice& key) const;
+
+  //lhh add
+  void InternalDistributeDelKeys(const Options& options, FileMetaData* meta, std::vector<Slice>& keys);
 
  private:
   struct Rep;

@@ -91,7 +91,7 @@ version_set_test_EXTERNAL_OBJECTS =
 version_set_test: CMakeFiles/version_set_test.dir/db/version_set_test.cc.o
 version_set_test: CMakeFiles/version_set_test.dir/build.make
 version_set_test: libleveldb-testharness.a
-version_set_test: libleveldb_static.a
+version_set_test: libleveldb.a
 version_set_test: CMakeFiles/version_set_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable version_set_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/version_set_test.dir/link.txt --verbose=$(VERBOSE)

@@ -1128,24 +1128,17 @@ bool VersionSet::IsTooMuchDelData(uint64_t level_bytes, uint64_t level_del_keys_
 }
 
 //lhh add
-void VersionSet::ComputeFileNeedUpdateUsingDelMem(MemTable* del_memtable, std::vector<*FileMetaData>& files_need_update){
-  mutex_.AssertHeld();
-  files_need_update.clear();
-  std::map<FileMetaData*, vector<Slice> > files_map;
+void VersionSet::DistributeDelKeysToTables(const Options &options, MemTable* del_memtable){
+  std::map<FileMetaData*, std::vector<Slice> > files_map;
   Iterator* iter = del_memtable->NewIterator();
   iter->SeekToFirst();
 
   for (; iter->Valid(); iter->Next()) {
     Slice del_key = iter->key();
     for (int level = config::kDistriStartLevel; level < config::kNumLevels-1; level++) {
-//        size_t num_files = files_[level].size();
-//        if (num_files == 0) continue;
-      //FileMetaData* const* files = &files_[level][0];
-      //uint32_t index = FindFile(vset_->icmp_, files_[level], ikey);
       for (size_t i = 0; i < current_->files_[level].size(); i++) {
         FileMetaData* f = current_->files_[level][i];
         if (icmp_.Compare(f->smallest.Encode(), del_key) <= 0 && icmp_.Compare(f->largest.Encode(), del_key) >= 0){
-          //files_need_update.push_back(f);
           files_map[f].push_back(del_key);
         }
       }
@@ -1154,12 +1147,16 @@ void VersionSet::ComputeFileNeedUpdateUsingDelMem(MemTable* del_memtable, std::v
 
   for (auto iter = files_map.begin();iter != files_map.end();++iter){
     FileMetaData* f = iter->first;
-    vector<Slice>& keys = iter->second;
-     
+    std::vector<Slice>& keys = iter->second;
+    Cache::Handle* handle = NULL;
+    Status s = FindTable(f->number, f->file_size, &handle);
+    if (s.ok()){
+      Table* t = reinterpret_cast<TableAndFile*>(cache_->Value(handle))->table;
+      t->InternalDistributeDelKeys(options, f, keys);
+    }
   }
-
-
-
+  del_memtable->Unref();
+  del_memtable = NULL;
 }
 
 void VersionSet::Finalize(Version* v) {

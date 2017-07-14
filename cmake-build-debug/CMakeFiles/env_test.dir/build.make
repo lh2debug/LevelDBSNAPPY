@@ -91,7 +91,7 @@ env_test_EXTERNAL_OBJECTS =
 env_test: CMakeFiles/env_test.dir/util/env_test.cc.o
 env_test: CMakeFiles/env_test.dir/build.make
 env_test: libleveldb-testharness.a
-env_test: libleveldb_static.a
+env_test: libleveldb.a
 env_test: CMakeFiles/env_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable env_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/env_test.dir/link.txt --verbose=$(VERBOSE)

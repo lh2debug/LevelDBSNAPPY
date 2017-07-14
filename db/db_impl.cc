@@ -37,6 +37,7 @@
 #include <iostream>
 #include <sstream>
 #include <cassert>
+#include "db/memtable.h"
 
 namespace leveldb {
 
@@ -521,7 +522,7 @@ Status DBImpl::WriteLevel0Table(MemTable* mem, VersionEdit* edit,
       (unsigned long long) meta.number);
 
   //lhh add
-  DistributeDelKeysToLowerLevel();
+  DistributeDelKeysToLowerLevel(options_);
 
   Status s;
   {
@@ -682,15 +683,10 @@ bool DBImpl::NeedScheduleExtraTrivialMove(int level){
 }
 
 //lhh add
-void DBImpl::DistributeDelKeysToLowerLevel() {
+void DBImpl::DistributeDelKeysToLowerLevel(const Options& options) {
     mutex_.AssertHeld();
     if (NULL == del_imm_) return;
-    vector<FileMetaData*> files_need_update;
-    versions_->ComputeFileNeedUpdateUsingDelMem(Memtable* del_imm_, files_need_update);
-
-
-
-
+    versions_->DistributeDelKeysToTables(options, del_imm_);
 }
 
 void DBImpl::MaybeScheduleCompaction() {

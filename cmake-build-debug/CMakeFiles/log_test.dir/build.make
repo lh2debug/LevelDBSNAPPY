@@ -91,7 +91,7 @@ log_test_EXTERNAL_OBJECTS =
 log_test: CMakeFiles/log_test.dir/db/log_test.cc.o
 log_test: CMakeFiles/log_test.dir/build.make
 log_test: libleveldb-testharness.a
-log_test: libleveldb_static.a
+log_test: libleveldb.a
 log_test: CMakeFiles/log_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable log_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/log_test.dir/link.txt --verbose=$(VERBOSE)

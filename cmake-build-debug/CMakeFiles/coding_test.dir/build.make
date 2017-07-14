@@ -91,7 +91,7 @@ coding_test_EXTERNAL_OBJECTS =
 coding_test: CMakeFiles/coding_test.dir/util/coding_test.cc.o
 coding_test: CMakeFiles/coding_test.dir/build.make
 coding_test: libleveldb-testharness.a
-coding_test: libleveldb_static.a
+coding_test: libleveldb.a
 coding_test: CMakeFiles/coding_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable coding_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/coding_test.dir/link.txt --verbose=$(VERBOSE)

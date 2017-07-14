@@ -13,14 +13,13 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "LEVELDB_PLATFORM_POSIX"
   "OS_LINUX"
-  "SNAPPY"
   )
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../"
   "../include"
-  "../snappy"
+  "."
   )
 
 # Targets to which this target links.

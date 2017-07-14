@@ -91,7 +91,7 @@ db_bench_EXTERNAL_OBJECTS =
 db_bench: CMakeFiles/db_bench.dir/db/db_bench.cc.o
 db_bench: CMakeFiles/db_bench.dir/build.make
 db_bench: libleveldb-testharness.a
-db_bench: libleveldb_static.a
+db_bench: libleveldb.a
 db_bench: CMakeFiles/db_bench.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable db_bench"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/db_bench.dir/link.txt --verbose=$(VERBOSE)

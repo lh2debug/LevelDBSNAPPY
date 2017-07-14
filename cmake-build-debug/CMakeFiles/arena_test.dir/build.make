@@ -91,7 +91,7 @@ arena_test_EXTERNAL_OBJECTS =
 arena_test: CMakeFiles/arena_test.dir/util/arena_test.cc.o
 arena_test: CMakeFiles/arena_test.dir/build.make
 arena_test: libleveldb-testharness.a
-arena_test: libleveldb_static.a
+arena_test: libleveldb.a
 arena_test: CMakeFiles/arena_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lh2debug/code/LevelDBSNAPPY/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable arena_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/arena_test.dir/link.txt --verbose=$(VERBOSE)
