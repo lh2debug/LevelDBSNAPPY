@@ -54,6 +54,8 @@ static double MaxBytesForLevel(const Options* options, int level) {
   return result;
 }
 
+
+
 static uint64_t MaxFileSizeForLevel(const Options* options, int level) {
   // We could vary per level to reduce number of files?
   return TargetFileSize(options);
@@ -1417,14 +1419,50 @@ void VersionSet::PickTrivialMoveFiles(Compaction* c){
   }
 }
 
-Compaction* VersionSet::PickCompaction() {
+Compaction* VersionSet::PickCompaction(const Options& options) {
   Compaction* c;
   int level;
 
+  c = new Compaction();
+
+
   // We prefer compactions triggered by too much data in a level over
   // the compactions triggered by seeks.
+
+  //lhh add
+  //perfer delete_compaction more
+  for (int i = config::kNumLevels - 1;i >= config::kDistriStartLevel;--i){
+    std::vector<FileMetaData*>& files = current()->files_[i];
+    for (int j = 0;j < files.size();++j){
+      FileMetaData* f = files[j];
+      if (NULL != f->del_buf && f->del_buf->ApproximateMemoryUsage()
+             >= options.write_buffer_size / config::kDelMemCoef )
+        c->inputs_[1].push_back(f);
+    }
+    if (!(c->inputs_[1]).empty()){
+      level = i;
+      c->setLevel(level-1, options_);
+      break;
+    }
+  }
+
+  const bool delete_compaction = !(c->inputs_[1]).empty();
+
+  if (delete_compaction){
+    assert(level >= config::kDistriStartLevel);
+    assert(level+1 < config::kNumLevels);
+    // lhh to do
+    c->input_version_ = current_;
+    c->input_version_->Ref();
+    return c;
+  }
+
+  delete c;
+  c = NULL;
+
   const bool size_compaction = (current_->compaction_score_ >= 1);
   const bool seek_compaction = (current_->file_to_compact_ != NULL);
+
   if (size_compaction) {
     level = current_->compaction_level_;
     assert(level >= 0);
@@ -1576,6 +1614,26 @@ Compaction* VersionSet::CompactRange(
   c->inputs_[0] = inputs;
   SetupOtherInputs(c);
   return c;
+}
+
+//lhh add
+Compaction::Compaction()
+  : level_(0),
+    max_output_file_size_(0),
+    input_version_(NULL),
+    grandparent_index_(0),
+    seen_key_(false),
+    overlapped_bytes_(0) {
+  for (int i = 0; i < config::kNumLevels; i++) {
+    level_ptrs_[i] = 0;
+  }
+}
+
+
+//lhh add
+void Compaction::setLevel(int level, const Options* options){
+  level_ = level;
+  max_output_file_size_ = MaxFileSizeForLevel(options, level);
 }
 
 Compaction::Compaction(const Options* options, int level)

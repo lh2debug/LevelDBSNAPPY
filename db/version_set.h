@@ -232,7 +232,7 @@ class VersionSet {
   // Returns NULL if there is no compaction to be done.
   // Otherwise returns a pointer to a heap-allocated object that
   // describes the compaction.  Caller should delete the result.
-  Compaction* PickCompaction();
+  Compaction* PickCompaction(const Options& options);
 
   // Return a compaction object for compacting the range [begin,end] in
   // the specified level.  Returns NULL if there is nothing in that
@@ -349,6 +349,9 @@ class Compaction {
   // and "level+1" will be merged to produce a set of "level+1" files.
   int level() const { return level_; }
 
+  //lhh add
+  void setLevel(int level, const Options* options);
+
   // Return the object that holds the edits to the descriptor done
   // by this compaction.
   VersionEdit* edit() { return &edit_; }
@@ -385,6 +388,9 @@ class Compaction {
  private:
   friend class Version;
   friend class VersionSet;
+
+  //lhh add
+  Compaction();
 
   Compaction(const Options* options, int level);
 
