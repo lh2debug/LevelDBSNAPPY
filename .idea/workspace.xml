@@ -29,10 +29,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dab0620e-b061-42a5-80d6-16265cbf45c3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/db_impl.cc" afterPath="$PROJECT_DIR$/db/db_impl.cc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/dbformat.h" afterPath="$PROJECT_DIR$/db/dbformat.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/version_set.cc" afterPath="$PROJECT_DIR$/db/version_set.cc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/version_set.h" afterPath="$PROJECT_DIR$/db/version_set.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,24 +42,24 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="version_edit.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/version_edit.h">
+      <file leaf-file-name="version_set.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/version_set.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="18" column="7" lean-forward="false" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-              <folding />
+            <state relative-caret-position="286">
+              <caret line="1372" column="22" lean-forward="true" selection-start-line="1372" selection-start-column="22" selection-end-line="1372" selection-end-column="22" />
+              <folding>
+                <element signature="e#217#244#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="version_set.cc" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/db/version_set.cc">
+      <file leaf-file-name="two_level_iterator.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/table/two_level_iterator.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="1383" column="21" lean-forward="true" selection-start-line="1383" selection-start-column="21" selection-end-line="1383" selection-end-column="21" />
-              <folding>
-                <element signature="e#217#244#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="462">
+              <caret line="178" column="29" lean-forward="false" selection-start-line="178" selection-start-column="13" selection-end-line="178" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -97,24 +94,22 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="merger.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/table/merger.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="474">
+              <caret line="202" column="30" lean-forward="false" selection-start-line="202" selection-start-column="15" selection-end-line="202" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="table_cache.cc" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/table_cache.cc">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="304">
               <caret line="87" column="34" lean-forward="false" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="34" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="table_cache.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/table_cache.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="51" column="26" lean-forward="false" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="26" />
-              <folding>
-                <element signature="e#356#373#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -141,11 +136,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="db_impl.cc" pinned="false" current-in-tab="false">
+      <file leaf-file-name="db_impl.cc" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/db_impl.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="983" column="48" lean-forward="false" selection-start-line="983" selection-start-column="31" selection-end-line="983" selection-end-column="48" />
+            <state relative-caret-position="232">
+              <caret line="988" column="22" lean-forward="true" selection-start-line="988" selection-start-column="22" selection-end-line="988" selection-end-column="22" />
               <folding>
                 <element signature="e#217#240#0" expanded="true" />
                 <element signature="e#963#985#0" expanded="true" />
@@ -158,24 +153,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>mayschedul</find>
-      <find>mayschedule</find>
-      <find>pickcompa</find>
-      <find>pickcom</find>
-      <find>MaxFileSizeForLevel</find>
-      <find>compaction</find>
-      <find>compaction::</find>
-      <find>pickcompact</find>
-      <find>pickcomp</find>
-      <find>del_buf</find>
-      <find>compaction_level_</find>
-      <find>maybecom</find>
-      <find>maybeco</find>
-      <find>maybec</find>
-      <find>maybesc</find>
-      <find>W</find>
-      <find>MA</find>
-      <find>MAYBE</find>
       <find>MAYB</find>
       <find>MAY</find>
       <find>M</find>
@@ -188,6 +165,24 @@
       <find>maybeschedu</find>
       <find>maybeschedul</find>
       <find>maybeschedule</find>
+      <find>i</find>
+      <find>iterr</find>
+      <find>iter</find>
+      <find>itera</find>
+      <find>iterator</find>
+      <find>MergingIterator</find>
+      <find>fi</find>
+      <find>file</find>
+      <find>filenu</find>
+      <find>filenum</find>
+      <find>filenumi</find>
+      <find>t</find>
+      <find>two</find>
+      <find>twole</find>
+      <find>twolev</find>
+      <find>twolevel</find>
+      <find>TwoLevelIterator</find>
+      <find>LevelFileNameIterator</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -243,7 +238,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="docompa&#9;null&#9;null&#10;files&#9;null&#9;null&#10;verset&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/version_set.h&#10;dbimpl&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_impl.cc&#10;table.h&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/include/leveldb/table.h&#10;tabcach&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/table_cache.h&#10;TableCache&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/table_cache.cc&#10;dimpl.c&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_impl.cc&#10;memtable&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/memtable.h&#10;docompact&#9;null&#9;null&#10;table.cc&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/table/table.cc&#10;vers&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/version_set.cc&#10;dbimp.c&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_impl.cc&#10;verset.c&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/version_set.cc&#10;verset.h&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/version_set.h&#10;dbenc.c&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_bench.cc&#10;dbenc&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_bench.cc&#10;dben&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/doc/bench/db_bench_tree_db.cc&#10;config&#9;FILE&#9;file:///usr/include/valgrind/config.h&#10;ver.h&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/version_set.h&#10;verse&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/version_set.cc&#10;dbimp.cc&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_impl.cc&#10;bloom.c&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/util/bloom.cc&#10;version&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/version_set.h&#10;PICKCOMPACT&#9;null&#9;null&#10;maybesch&#9;null&#9;null&#10;writelevel0&#9;null&#9;null&#10;writelevel&#9;null&#9;null&#10;MEMTABLE\&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/memtable.h&#10;filemet&#9;null&#9;null&#10;dbim.c&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_impl.cc&#10;write&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/write_batch_internal.h&#10;dbimpl.c&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_impl.cc&#10;memtable.h&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/memtable.h&#10;builder.c&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/builder.cc&#10;makeroom&#9;null&#9;null&#10;mays&#9;null&#9;null&#10;MAYS&#9;null&#9;null&#10;status&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/include/leveldb/status.h&#10;compactmemt&#9;null&#9;null&#10;WRITE_BATCH&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/include/leveldb/write_batch.h&#10;db.h&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/include/leveldb/db.h&#10;dbbench&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_bench.cc&#10;dbbenc&#9;RUN_CONFIGURATION&#9;db_bench&#10;setupother&#9;null&#9;null&#10;pickcom&#9;null&#9;null&#10;merge&#9;FILE&#9;file:///home/lh2debug/mycode/LevelDBSNAPPY/table/merger.cc&#10;docompac&#9;null&#9;null&#10;setupoth&#9;null&#9;null&#10;maysc&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="docompac&#9;null&#9;null&#10;makeinpu&#9;null&#9;null&#10;docompa&#9;null&#9;null&#10;files&#9;null&#9;null&#10;verset&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/version_set.h&#10;dbimpl&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_impl.cc&#10;table.h&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/include/leveldb/table.h&#10;tabcach&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/table_cache.h&#10;TableCache&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/table_cache.cc&#10;dimpl.c&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_impl.cc&#10;memtable&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/memtable.h&#10;docompact&#9;null&#9;null&#10;table.cc&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/table/table.cc&#10;vers&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/version_set.cc&#10;dbimp.c&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_impl.cc&#10;verset.c&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/version_set.cc&#10;verset.h&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/version_set.h&#10;dbenc.c&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_bench.cc&#10;dbenc&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_bench.cc&#10;dben&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/doc/bench/db_bench_tree_db.cc&#10;config&#9;FILE&#9;file:///usr/include/valgrind/config.h&#10;ver.h&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/version_set.h&#10;verse&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/version_set.cc&#10;dbimp.cc&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_impl.cc&#10;bloom.c&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/util/bloom.cc&#10;version&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/version_set.h&#10;PICKCOMPACT&#9;null&#9;null&#10;maybesch&#9;null&#9;null&#10;writelevel0&#9;null&#9;null&#10;writelevel&#9;null&#9;null&#10;MEMTABLE\&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/memtable.h&#10;filemet&#9;null&#9;null&#10;dbim.c&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_impl.cc&#10;write&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/write_batch_internal.h&#10;dbimpl.c&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_impl.cc&#10;memtable.h&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/memtable.h&#10;builder.c&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/builder.cc&#10;makeroom&#9;null&#9;null&#10;mays&#9;null&#9;null&#10;MAYS&#9;null&#9;null&#10;status&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/include/leveldb/status.h&#10;compactmemt&#9;null&#9;null&#10;WRITE_BATCH&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/include/leveldb/write_batch.h&#10;db.h&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/include/leveldb/db.h&#10;dbbench&#9;FILE&#9;file:///home/lh2debug/code/LevelDBSNAPPY/db/db_bench.cc&#10;dbbenc&#9;RUN_CONFIGURATION&#9;db_bench&#10;setupother&#9;null&#9;null&#10;pickcom&#9;null&#9;null&#10;merge&#9;FILE&#9;file:///home/lh2debug/mycode/LevelDBSNAPPY/table/merger.cc&#10;setupoth&#9;null&#9;null" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++" />
   </component>
   <component name="RunDashboard">
@@ -503,12 +498,12 @@
       <workItem from="1499042454434" duration="163000" />
       <workItem from="1499043795507" duration="28455000" />
       <workItem from="1499742556033" duration="21552000" />
-      <workItem from="1499854902494" duration="40745000" />
+      <workItem from="1499854902494" duration="43829000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90915000" />
+    <option name="totallyTimeSpent" value="93999000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="25" width="1922" height="1032" extended-state="6" />
@@ -545,16 +540,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/version_set.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11538">
-          <caret line="641" column="49" lean-forward="true" selection-start-line="641" selection-start-column="49" selection-end-line="641" selection-end-column="49" />
-          <folding>
-            <element signature="e#217#244#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/table/merger.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -780,14 +765,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/table/merger.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/util/arena.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
@@ -873,8 +850,8 @@
         <state relative-caret-position="234">
           <caret line="61" column="71" lean-forward="false" selection-start-line="61" selection-start-column="59" selection-end-line="61" selection-end-column="71" />
           <folding>
-            <element signature="e#300#319#0" expanded="true" />
-            <element signature="e#360#377#0" expanded="true" />
+            <element signature="e#300#319#0" expanded="false" />
+            <element signature="e#360#377#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -892,7 +869,7 @@
         <state relative-caret-position="246">
           <caret line="51" column="26" lean-forward="false" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="26" />
           <folding>
-            <element signature="e#356#373#0" expanded="true" />
+            <element signature="e#356#373#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -955,23 +932,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/db_impl.cc">
+    <entry file="file://$PROJECT_DIR$/table/merger.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="983" column="48" lean-forward="false" selection-start-line="983" selection-start-column="31" selection-end-line="983" selection-end-column="48" />
-          <folding>
-            <element signature="e#217#240#0" expanded="true" />
-            <element signature="e#963#985#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="474">
+          <caret line="202" column="30" lean-forward="false" selection-start-line="202" selection-start-column="15" selection-end-line="202" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/table/two_level_iterator.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="178" column="29" lean-forward="false" selection-start-line="178" selection-start-column="13" selection-end-line="178" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/version_set.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="1383" column="21" lean-forward="true" selection-start-line="1383" selection-start-column="21" selection-end-line="1383" selection-end-column="21" />
+        <state relative-caret-position="286">
+          <caret line="1372" column="22" lean-forward="true" selection-start-line="1372" selection-start-column="22" selection-end-line="1372" selection-end-column="22" />
           <folding>
             <element signature="e#217#244#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/db_impl.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="988" column="22" lean-forward="true" selection-start-line="988" selection-start-column="22" selection-end-line="988" selection-end-column="22" />
+          <folding>
+            <element signature="e#217#240#0" expanded="true" />
+            <element signature="e#963#985#0" expanded="true" />
           </folding>
         </state>
       </provider>

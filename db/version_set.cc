@@ -1377,11 +1377,27 @@ Iterator* VersionSet::MakeInputIterator(Compaction* c) {
   // Level-0 files have to be merged together.  For other levels,
   // we will make a concatenating iterator per level.
   // TODO(opt): use concatenating iterator for level-0 if there is no overlap
-  const int space = (c->level() == 0 ? c->inputs_[0].size() + 1 : 2);
+  //lhh add
+  int mem_iter_num = 0;
+  for (int which = 0;which < 2;++which){
+    std::vector<FileMetaData*>& files = c->inputs_[which];
+    for (int i = 0;i < files.size();++i){
+      if (NULL != files[i]->del_buf) mem_iter_num++;
+    }
+  }
+
+  //lhh modify
+  const int space = (c->level() == 0 ? c->inputs_[0].size() + 1 : 2) + mem_iter_num;
   Iterator** list = new Iterator*[space];
   int num = 0;
   for (int which = 0; which < 2; which++) {
+
     if (!c->inputs_[which].empty()) {
+      //lhh add
+      for (int i = 0;i < c->inputs_[which].size();++i){
+        if (NULL != c->inputs_[which][i]->del_buf)
+          list[num++] = c->inputs_[which][i]->del_buf->NewIterator();
+      }
       if (c->level() + which == 0) {
         const std::vector<FileMetaData*>& files = c->inputs_[which];
         for (size_t i = 0; i < files.size(); i++) {
