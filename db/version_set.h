@@ -280,7 +280,7 @@ class VersionSet {
   bool IsTooMuchDelData(uint64_t level_bytes, uint64_t level_del_keys_bytes);
 
   //lhh add
-  void DistributeDelKeysToTables(const Options& options, MemTable* del_memtable);
+  void DistributeDelKeysToTables(const Options& options, MemTable* &del_memtable);
 
  private:
   class Builder;

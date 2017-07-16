@@ -166,6 +166,7 @@ DBImpl::DBImpl(const Options& raw_options, const std::string& dbname)
 
 DBImpl::~DBImpl() {
   // Wait for background work to finish
+  std::cout << "~DBImpl()" << std::endl;
   mutex_.Lock();
   shutting_down_.Release_Store(this);  // Any non-NULL value is ok
   while (bg_compaction_scheduled_) {
@@ -183,9 +184,11 @@ DBImpl::~DBImpl() {
 
   //lhh add
   if (del_mem_ != NULL) {
+    std::cout << "del mem_ " << del_mem_ << std::endl;
     del_mem_->Unref();
   }
   if (del_imm_ != NULL){
+    std::cout << "del imm_ " << del_imm_ << std::endl;
     del_imm_->Unref();
   }
 
@@ -1464,8 +1467,10 @@ Status DBImpl::MakeRoomForWrite(bool force) {
       imm_ = mem_;
 
       //lhh add
-      del_imm_ = mem_;
+      del_imm_ = del_mem_;
+      std::cout << "del_imm_->ApproximateMemoryUsage() in write" << del_imm_->ApproximateMemoryUsage() << std::endl;
       del_mem_ = new MemTable(internal_comparator_);
+      std::cout << "del_mem_->ApproximateMemoryUsage() in write" << del_mem_->ApproximateMemoryUsage() << std::endl;
       del_mem_->Ref();
 
       has_imm_.Release_Store(imm_);
@@ -1648,6 +1653,7 @@ Status DB::Open(const Options& options, const std::string& dbname,
   //lhh add
   if (s.ok()){
     impl->del_mem_ = new MemTable(impl->internal_comparator_);
+    std::cout << "del_memtable->ApproximateMemoryUsage() in open" << impl->del_mem_->ApproximateMemoryUsage() << std::endl;
     impl->del_mem_->Ref();
   }
 

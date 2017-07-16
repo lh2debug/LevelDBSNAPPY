@@ -1131,13 +1131,13 @@ bool VersionSet::IsTooMuchDelData(uint64_t level_bytes, uint64_t level_del_keys_
 }
 
 //lhh add
-void VersionSet::DistributeDelKeysToTables(const Options &options, MemTable* del_memtable){
+void VersionSet::DistributeDelKeysToTables(const Options &options, MemTable* &del_memtable){
   std::cout << "enter function VersionSet::DistributeDelKeysToTables\n";
     std::cout << "del_memtable->ApproximateMemoryUsage()" << del_memtable->ApproximateMemoryUsage() << std::endl;
   std::map<FileMetaData*, std::vector<Slice> > files_map;
   Iterator* iter = del_memtable->NewIterator();
   iter->SeekToFirst();
-
+  int tmp = 0;
   for (; iter->Valid(); iter->Next()) {
     Slice del_key = iter->key();
     for (int level = config::kDistriStartLevel; level < config::kNumLevels-1; level++) {
@@ -1148,6 +1148,8 @@ void VersionSet::DistributeDelKeysToTables(const Options &options, MemTable* del
         }
       }
     }
+    std::cout << tmp++ << std::endl;
+    std::cout << del_key.ToString() << std::endl;
   }
 
   for (auto iter = files_map.begin();iter != files_map.end();++iter){
