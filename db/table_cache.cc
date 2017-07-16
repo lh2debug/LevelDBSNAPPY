@@ -8,6 +8,9 @@
 #include "leveldb/env.h"
 #include "leveldb/table.h"
 #include "util/coding.h"
+//lhh add
+#include <glog/logging.h>
+#include <iostream>
 
 namespace leveldb {
 
@@ -81,14 +84,15 @@ Status TableCache::FindTable(uint64_t file_number, uint64_t file_size,
 
 //lhh add
 Status TableCache::DistributeDelKeys(const Options& options, FileMetaData* f, std::vector<Slice>& keys){
-    Cache::Handle* handle = NULL;
-    Status s = FindTable(f->number, f->file_size, &handle);
-    if (s.ok()){
-      Table* t = reinterpret_cast<TableAndFile*>(cache_->Value(handle))->table;
-      t->InternalDistributeDelKeys(options, f, keys);
-      cache_->Release(handle);
-    }
-    return s;
+    std::cout << "enter function TableCache::DistributeDelKeys\n";
+  Cache::Handle* handle = NULL;
+  Status s = FindTable(f->number, f->file_size, &handle);
+  if (s.ok()){
+    Table* t = reinterpret_cast<TableAndFile*>(cache_->Value(handle))->table;
+    t->InternalDistributeDelKeys(options, f, keys);
+    cache_->Release(handle);
+  }
+  return s;
 }
 
 Iterator* TableCache::NewIterator(const ReadOptions& options,

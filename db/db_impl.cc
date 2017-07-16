@@ -38,6 +38,7 @@
 #include <sstream>
 #include <cassert>
 #include "db/memtable.h"
+#include <glog/logging.h>
 
 namespace leveldb {
 
@@ -181,8 +182,12 @@ DBImpl::~DBImpl() {
   if (imm_ != NULL) imm_->Unref();
 
   //lhh add
-  if (del_mem_ != NULL) del_mem_->Unref();
-  if (del_imm_ != NULL) del_imm_->Unref();
+  if (del_mem_ != NULL) {
+    del_mem_->Unref();
+  }
+  if (del_imm_ != NULL){
+    del_imm_->Unref();
+  }
 
   delete tmp_batch_;
   delete log_;
@@ -562,6 +567,9 @@ Status DBImpl::WriteLevel0Table(MemTable* mem, VersionEdit* edit,
 
 void DBImpl::CompactMemTable() {
   mutex_.AssertHeld();
+  //lhh log
+  std::cout << "enter function compactmemtable\n";
+
   assert(imm_ != NULL);
 
   //lhh add
@@ -676,6 +684,7 @@ void DBImpl::RecordBackgroundError(const Status& s) {
 //lhh add
 bool DBImpl::NeedScheduleExtraTrivialMove(int level){
   mutex_.AssertHeld();
+    std::cout << "enter function NeedScheduleExtraTrivialMove\n";
   uint64_t level_bytes;
   uint64_t level_del_keys_bytes;
   versions_->TotalFileSizeAndDelKeysBytes(level, level_bytes, level_del_keys_bytes);
@@ -684,9 +693,10 @@ bool DBImpl::NeedScheduleExtraTrivialMove(int level){
 
 //lhh add
 void DBImpl::DistributeDelKeysToLowerLevel(const Options& options) {
-    mutex_.AssertHeld();
-    if (NULL == del_imm_) return;
-    versions_->DistributeDelKeysToTables(options, del_imm_);
+    std::cout << "enter function DBImpl::DistributeDelKeysToLowerLevel\n";
+  mutex_.AssertHeld();
+  if (NULL == del_imm_) return;
+  versions_->DistributeDelKeysToTables(options, del_imm_);
 }
 
 void DBImpl::MaybeScheduleCompaction() {
@@ -956,6 +966,8 @@ Status DBImpl::InstallCompactionResults(CompactionState* compact) {
 }
 
 Status DBImpl::DoCompactionWork(CompactionState* compact) {
+  //lhh log
+  std::cout << "enter function docompactionwork\n";
   const uint64_t start_micros = env_->NowMicros();
   int64_t imm_micros = 0;  // Micros spent doing imm_ compactions
 
@@ -1398,6 +1410,7 @@ WriteBatch* DBImpl::BuildBatchGroup(Writer** last_writer) {
 // REQUIRES: this thread is currently at the front of the writer queue
 Status DBImpl::MakeRoomForWrite(bool force) {
   mutex_.AssertHeld();
+    std::cout << "enter function DBImpl::MakeRoomForWrite\n";
   assert(!writers_.empty());
   bool allow_delay = !force;
   Status s;
@@ -1621,6 +1634,7 @@ DB::~DB() { }
 
 Status DB::Open(const Options& options, const std::string& dbname,
                 DB** dbptr) {
+  std::cout << "enter function DBImpl::Open\n";
   DBStat::Clear();
   *dbptr = NULL;
 

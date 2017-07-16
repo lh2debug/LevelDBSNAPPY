@@ -8,10 +8,15 @@
 #include "leveldb/env.h"
 #include "leveldb/iterator.h"
 #include "util/coding.h"
+//lhh add
+#include <glog/logging.h>
+#include <iostream>
 
 namespace leveldb {
 
 static Slice GetLengthPrefixedSlice(const char* data) {
+  //lhh log
+  std::cout << "enter function GetLengthPrefixedSlice\n";
   uint32_t len;
   const char* p = data;
   p = GetVarint32Ptr(p, p + 5, &len);  // +5: we assume "p" is not corrupted

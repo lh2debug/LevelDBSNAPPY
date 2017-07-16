@@ -16,6 +16,10 @@
 #include "table/two_level_iterator.h"
 #include "util/coding.h"
 
+//lhh add
+#include <glog/logging.h>
+#include <iostream>
+
 namespace leveldb {
 
 struct Table::Rep {
@@ -91,6 +95,7 @@ Status Table::Open(const Options& options,
 
 //lhh add
 Status Table::InternalDistributeDelKeys(const Options& options, FileMetaData* meta, std::vector<Slice>& keys) {
+    std::cout << "enter function Table::InternalDistributeDelKeys\n";
     Status s;
     Iterator* iiter = rep_->index_block->NewIterator(rep_->options.comparator);
     assert(NULL != rep_->filter);

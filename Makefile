@@ -59,8 +59,8 @@ BENCHMARKS = \
 	doc/bench/db_bench_sqlite3 \
 	doc/bench/db_bench_tree_db
 
-CFLAGS += -I. -I./include $(PLATFORM_CCFLAGS) $(OPT)
-CXXFLAGS += -I. -I./include $(PLATFORM_CXXFLAGS) $(OPT)
+CFLAGS += -I. -g -lglog -I./include $(PLATFORM_CCFLAGS) $(OPT)
+CXXFLAGS += -I. -g -lglog -I./include $(PLATFORM_CXXFLAGS) $(OPT)
 
 LDFLAGS += $(PLATFORM_LDFLAGS)
 LIBS += $(PLATFORM_LIBS)

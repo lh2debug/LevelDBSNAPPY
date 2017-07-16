@@ -22,6 +22,7 @@
 #include <string.h>
 #include "db/memfile.h"
 #include "db/dbstat.h"
+#include <glog/logging.h>
 
 // Comma-separated list of operations to run in the specified order
 //   Actual benchmarks:
@@ -1280,6 +1281,8 @@ namespace leveldb {
 }  // namespace leveldb
 
 int main(int argc, char** argv) {
+
+  //lhh log
 
 
   FLAGS_write_buffer_size = leveldb::Options().write_buffer_size;

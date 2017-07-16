@@ -20,6 +20,9 @@
 #include "db/memtable.h"
 #include "db/write_batch_internal.h"
 #include "util/coding.h"
+//lhh add
+#include <glog/logging.h>
+#include <iostream>
 
 namespace leveldb {
 
@@ -121,10 +124,13 @@ class MemTableInserter : public WriteBatch::Handler {
     sequence_++;
   }
   virtual void Delete(const Slice& key) {
+    std::cout << "enter function WriteBatch::Delete\n";
     mem_->Add(sequence_, kTypeDeletion, key, Slice());
     //lhh add
-    if (del_mem_ != NULL)
+    if (del_mem_ != NULL){
       del_mem_->Add(sequence_, kTypeDeletion, key, Slice());
+      std::cout << "del_mem_->Add(sequence_, kTypeDeletion, key, Slice());\n";
+    }
     sequence_++;
   }
 };
@@ -132,6 +138,7 @@ class MemTableInserter : public WriteBatch::Handler {
 
 Status WriteBatchInternal::InsertInto(const WriteBatch* b,
                                       MemTable* memtable, MemTable* del_memtable) {
+  std::cout << "enter function WriteBatch::InsertInto\n";
   MemTableInserter inserter;
   inserter.sequence_ = WriteBatchInternal::Sequence(b);
   inserter.mem_ = memtable;
