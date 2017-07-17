@@ -1,7 +1,7 @@
 #include "memfile.h"
 
-string MemcacheFile::pathname_ = "/home/lh2debug/lhh/test_files/";
-string MemFile::pathname_ = "/home/lh2debug/lhh/test_files/data.txt";
+string MemcacheFile::pathname_ = "./test_files/";
+string MemFile::pathname_ = "./data.txt";
 MemFile* MemFile::instance_ = NULL;
 
 MemcacheFile::MemcacheFile(int filenum, string mode) :

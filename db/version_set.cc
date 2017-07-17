@@ -1132,8 +1132,8 @@ bool VersionSet::IsTooMuchDelData(uint64_t level_bytes, uint64_t level_del_keys_
 
 //lhh add
 void VersionSet::DistributeDelKeysToTables(const Options &options, MemTable* &del_memtable){
-  std::cout << "enter function VersionSet::DistributeDelKeysToTables\n";
-    std::cout << "del_memtable->ApproximateMemoryUsage()" << del_memtable->ApproximateMemoryUsage() << std::endl;
+  //std::cout << "enter function VersionSet::DistributeDelKeysToTables\n";
+    //std::cout << "del_memtable->ApproximateMemoryUsage()" << del_memtable->ApproximateMemoryUsage() << std::endl;
   std::map<FileMetaData*, std::vector<Slice> > files_map;
   Iterator* iter = del_memtable->NewIterator();
   iter->SeekToFirst();
@@ -1148,8 +1148,8 @@ void VersionSet::DistributeDelKeysToTables(const Options &options, MemTable* &de
         }
       }
     }
-    std::cout << tmp++ << std::endl;
-    std::cout << del_key.ToString() << std::endl;
+    //std::cout << tmp++ << std::endl;
+    //std::cout << del_key.ToString() << std::endl;
   }
 
   for (auto iter = files_map.begin();iter != files_map.end();++iter){
@@ -1375,7 +1375,7 @@ void VersionSet::GetRange2(const std::vector<FileMetaData*>& inputs1,
 }
 
 Iterator* VersionSet::MakeInputIterator(Compaction* c) {
-  std::cout << "enter function VersionSet::MakeInputIterator\n";
+  //std::cout << "enter function VersionSet::MakeInputIterator\n";
   ReadOptions options;
   options.verify_checksums = options_->paranoid_checks;
   options.fill_cache = false;

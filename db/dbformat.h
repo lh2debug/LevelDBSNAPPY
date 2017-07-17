@@ -63,7 +63,7 @@ static const int kDistriStartLevel = 2;
 static const bool kRunBloomFilter = true;
 
 //lhh add
-static const bool kDelMemCoef = 30;
+static const int kDelMemCoef = 30;
 
 
 }  // namespace config

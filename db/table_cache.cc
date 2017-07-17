@@ -84,7 +84,7 @@ Status TableCache::FindTable(uint64_t file_number, uint64_t file_size,
 
 //lhh add
 Status TableCache::DistributeDelKeys(const Options& options, FileMetaData* f, std::vector<Slice>& keys){
-    std::cout << "enter function TableCache::DistributeDelKeys\n";
+    //std::cout << "enter function TableCache::DistributeDelKeys\n";
   Cache::Handle* handle = NULL;
   Status s = FindTable(f->number, f->file_size, &handle);
   if (s.ok()){

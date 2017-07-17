@@ -23,6 +23,7 @@
 #include "db/memfile.h"
 #include "db/dbstat.h"
 #include <glog/logging.h>
+#include "db/dbformat.h"
 
 // Comma-separated list of operations to run in the specified order
 //   Actual benchmarks:
@@ -157,7 +158,7 @@ static bool FLAGS_key_range_same = true;
 
 static bool FLAGS_only_write = false;
 
-static bool FLAGS_use_my_method = false;
+static bool FLAGS_use_my_method = true;
 
 static int FLAGS_cycle_num = 30;
 
@@ -212,7 +213,7 @@ struct StatUtil {
     const char* strcompact = "compact,";
     const char*  strstats = "stats,";
     const char*  strcycleoverwrite = "cycleoverwrite,";
-    const char* striostat = "deliostat";
+    const char* striostat = "deliostat,";
     int byte_need = cnt_ * (strlen(strdspace) * 2 + strlen(strcyclewritefull) + strlen(strdelete) + strlen(strstats) * 2 + 6) + strlen(strdspace) + strlen(strlevelsstnum) + strlen(strmovenum) + strlen(striostat) + strlen(strdeleteperc) + strlen(strcompactresult) + strlen(strcompact) + 7;
     bmark_ = new char[byte_need];
     char* tmp_bmark = bmark_;
@@ -1361,6 +1362,7 @@ int main(int argc, char** argv) {
 
 
   leveldb::g_env = leveldb::Env::Default();
+
 
   // Choose a location for the test database if none given with --db=<path>
   if (FLAGS_db == NULL) {

@@ -166,7 +166,7 @@ DBImpl::DBImpl(const Options& raw_options, const std::string& dbname)
 
 DBImpl::~DBImpl() {
   // Wait for background work to finish
-  std::cout << "~DBImpl()" << std::endl;
+  //std::cout << "~DBImpl()" << std::endl;
   mutex_.Lock();
   shutting_down_.Release_Store(this);  // Any non-NULL value is ok
   while (bg_compaction_scheduled_) {
@@ -184,11 +184,11 @@ DBImpl::~DBImpl() {
 
   //lhh add
   if (del_mem_ != NULL) {
-    std::cout << "del mem_ " << del_mem_ << std::endl;
+    //std::cout << "del mem_ " << del_mem_ << std::endl;
     del_mem_->Unref();
   }
   if (del_imm_ != NULL){
-    std::cout << "del imm_ " << del_imm_ << std::endl;
+    //std::cout << "del imm_ " << del_imm_ << std::endl;
     del_imm_->Unref();
   }
 
@@ -571,7 +571,7 @@ Status DBImpl::WriteLevel0Table(MemTable* mem, VersionEdit* edit,
 void DBImpl::CompactMemTable() {
   mutex_.AssertHeld();
   //lhh log
-  std::cout << "enter function compactmemtable\n";
+  //std::cout << "enter function compactmemtable\n";
 
   assert(imm_ != NULL);
 
@@ -687,7 +687,7 @@ void DBImpl::RecordBackgroundError(const Status& s) {
 //lhh add
 bool DBImpl::NeedScheduleExtraTrivialMove(int level){
   mutex_.AssertHeld();
-    std::cout << "enter function NeedScheduleExtraTrivialMove\n";
+    //std::cout << "enter function NeedScheduleExtraTrivialMove\n";
   uint64_t level_bytes;
   uint64_t level_del_keys_bytes;
   versions_->TotalFileSizeAndDelKeysBytes(level, level_bytes, level_del_keys_bytes);
@@ -696,7 +696,7 @@ bool DBImpl::NeedScheduleExtraTrivialMove(int level){
 
 //lhh add
 void DBImpl::DistributeDelKeysToLowerLevel(const Options& options) {
-    std::cout << "enter function DBImpl::DistributeDelKeysToLowerLevel\n";
+    //std::cout << "enter function DBImpl::DistributeDelKeysToLowerLevel\n";
   mutex_.AssertHeld();
   if (NULL == del_imm_) return;
   versions_->DistributeDelKeysToTables(options, del_imm_);
@@ -970,7 +970,7 @@ Status DBImpl::InstallCompactionResults(CompactionState* compact) {
 
 Status DBImpl::DoCompactionWork(CompactionState* compact) {
   //lhh log
-  std::cout << "enter function docompactionwork\n";
+  //std::cout << "enter function docompactionwork\n";
   const uint64_t start_micros = env_->NowMicros();
   int64_t imm_micros = 0;  // Micros spent doing imm_ compactions
 
@@ -1413,7 +1413,7 @@ WriteBatch* DBImpl::BuildBatchGroup(Writer** last_writer) {
 // REQUIRES: this thread is currently at the front of the writer queue
 Status DBImpl::MakeRoomForWrite(bool force) {
   mutex_.AssertHeld();
-    std::cout << "enter function DBImpl::MakeRoomForWrite\n";
+    //std::cout << "enter function DBImpl::MakeRoomForWrite\n";
   assert(!writers_.empty());
   bool allow_delay = !force;
   Status s;
@@ -1468,9 +1468,9 @@ Status DBImpl::MakeRoomForWrite(bool force) {
 
       //lhh add
       del_imm_ = del_mem_;
-      std::cout << "del_imm_->ApproximateMemoryUsage() in write" << del_imm_->ApproximateMemoryUsage() << std::endl;
+      //std::cout << "del_imm_->ApproximateMemoryUsage() in write" << del_imm_->ApproximateMemoryUsage() << std::endl;
       del_mem_ = new MemTable(internal_comparator_);
-      std::cout << "del_mem_->ApproximateMemoryUsage() in write" << del_mem_->ApproximateMemoryUsage() << std::endl;
+      //std::cout << "del_mem_->ApproximateMemoryUsage() in write" << del_mem_->ApproximateMemoryUsage() << std::endl;
       del_mem_->Ref();
 
       has_imm_.Release_Store(imm_);
@@ -1639,7 +1639,7 @@ DB::~DB() { }
 
 Status DB::Open(const Options& options, const std::string& dbname,
                 DB** dbptr) {
-  std::cout << "enter function DBImpl::Open\n";
+  //std::cout << "enter function DBImpl::Open\n";
   DBStat::Clear();
   *dbptr = NULL;
 
@@ -1653,7 +1653,7 @@ Status DB::Open(const Options& options, const std::string& dbname,
   //lhh add
   if (s.ok()){
     impl->del_mem_ = new MemTable(impl->internal_comparator_);
-    std::cout << "del_memtable->ApproximateMemoryUsage() in open" << impl->del_mem_->ApproximateMemoryUsage() << std::endl;
+    //std::cout << "del_memtable->ApproximateMemoryUsage() in open" << impl->del_mem_->ApproximateMemoryUsage() << std::endl;
     impl->del_mem_->Ref();
   }
 

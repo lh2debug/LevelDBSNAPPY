@@ -121,17 +121,17 @@ class MemTableInserter : public WriteBatch::Handler {
 
   virtual void Put(const Slice& key, const Slice& value) {
     mem_->Add(sequence_, kTypeValue, key, value);
-    std::cout << "del_mem_->ApproximateMemoryUsage() in put" << del_mem_->ApproximateMemoryUsage() << std::endl;
+    //std::cout << "del_mem_->ApproximateMemoryUsage() in put" << del_mem_->ApproximateMemoryUsage() << std::endl;
     sequence_++;
   }
   virtual void Delete(const Slice& key) {
-    std::cout << "enter function WriteBatch::Delete\n";
+    //std::cout << "enter function WriteBatch::Delete\n";
     mem_->Add(sequence_, kTypeDeletion, key, Slice());
-    std::cout << "del_mem_->ApproximateMemoryUsage() in delete" << del_mem_->ApproximateMemoryUsage() << std::endl;
+    //std::cout << "del_mem_->ApproximateMemoryUsage() in delete" << del_mem_->ApproximateMemoryUsage() << std::endl;
     //lhh add
     if (del_mem_ != NULL){
       del_mem_->Add(sequence_, kTypeDeletion, key, Slice());
-      std::cout << "del_mem_->Add(sequence_, kTypeDeletion, key, Slice());\n";
+      //std::cout << "del_mem_->Add(sequence_, kTypeDeletion, key, Slice());\n";
     }
     sequence_++;
   }
@@ -140,7 +140,7 @@ class MemTableInserter : public WriteBatch::Handler {
 
 Status WriteBatchInternal::InsertInto(const WriteBatch* b,
                                       MemTable* memtable, MemTable* del_memtable) {
-  std::cout << "enter function WriteBatch::InsertInto\n";
+  //std::cout << "enter function WriteBatch::InsertInto\n";
   MemTableInserter inserter;
   inserter.sequence_ = WriteBatchInternal::Sequence(b);
   inserter.mem_ = memtable;
